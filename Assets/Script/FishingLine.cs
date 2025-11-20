@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class FishingLine : MonoBehaviour
+public class FishingLine2D : MonoBehaviour
 {
-    public Transform rodTip;        // Where the line begins
-    public Transform hook;          // The hook or bobber
-    public float maxLineLength = 10f;
+    public Transform rodTip;          // Start of the line
+    public Rigidbody2D hookRb;        // Hook/Bobber Rigidbody2D
+    public float maxLineLength = 5f;
 
     private LineRenderer lineRenderer;
 
@@ -14,27 +14,43 @@ public class FishingLine : MonoBehaviour
         lineRenderer.positionCount = 2;
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        ClampPhysics2D();
         DrawLine();
-        ClampDistance();
     }
 
     void DrawLine()
     {
         lineRenderer.SetPosition(0, rodTip.position);
-        lineRenderer.SetPosition(1, hook.position);
+        lineRenderer.SetPosition(1, hookRb.position);
     }
 
-    void ClampDistance()
+    void ClampPhysics2D()
     {
-        float distance = Vector3.Distance(rodTip.position, hook.position);
+        Vector2 rodPos = rodTip.position;
+        Vector2 hookPos = hookRb.position;
 
+        Vector2 direction = hookPos - rodPos;
+        float distance = direction.magnitude;
+
+        // Only correct if the hook is too far
         if (distance > maxLineLength)
         {
-            // Push the hook back so it never exceeds max length
-            Vector3 dir = (hook.position - rodTip.position).normalized;
-            hook.position = rodTip.position + dir * maxLineLength;
+            Vector2 dir = direction.normalized;
+
+            // 1. Move the hook back to max allowed distance
+            hookRb.position = rodPos + dir * maxLineLength;
+
+            // 2. Kill the outward velocity
+            Vector2 velocity = hookRb.linearVelocity;
+
+            float outwardSpeed = Vector2.Dot(velocity, dir);
+            if (outwardSpeed > 0)
+            {
+                // Remove only the outward (stretching) component
+                hookRb.linearVelocity = velocity - dir * outwardSpeed;
+            }
         }
     }
 }
