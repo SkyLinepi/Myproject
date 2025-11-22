@@ -1,85 +1,93 @@
-using UnityEngine;
+๏ปฟusing UnityEngine;
 
 public class FishMovement : MonoBehaviour
 {
     [Header("Speed Settings")]
-    public float minSpeed = 1f;    // ความเร็วต่ำสุด
-    public float maxSpeed = 3f;    // ความเร็วสูงสุด
-    private float speed;           // ความเร็วของปลาตัวนี้
+    public float minSpeed = 1f;
+    public float maxSpeed = 3f;
+    private float speed;
 
-    [Header("Movement Area")]
-    public float minX = -7f;
-    public float maxX = 7f;
-    public float minY = -4f;
-    public float maxY = 0f;
+    [Header("Area Sprite (เธเธฃเธญเธเธเธทเนเธเธ—เธตเนเธ—เธตเนเธเธฅเธฒเธญเธขเธนเนเนเธ”เน)")]
+    public SpriteRenderer areaSprite; 
+
+    private float minX, maxX, minY, maxY;
 
     [Header("Direction Change")]
-    public float changeDirectionTime = 2f;  // เปลี่ยนทิศทุกกี่วินาที
+    public float changeDirectionTime = 2f;
     private float timer;
 
-    private Vector2 targetDirection;  // ทิศทางการว่าย
+    private Vector2 targetDirection;
 
     void Start()
     {
-        // กำหนดความเร็วสุ่มให้ปลาแต่ละตัว
         speed = Random.Range(minSpeed, maxSpeed);
 
-        // สุ่มทิศทางแรก
+        SetupAreaFromSprite();
+
         PickNewDirection();
     }
 
     void Update()
     {
-        // เคลื่อนที่ไปตามทิศทาง
         transform.Translate(targetDirection * speed * Time.deltaTime);
 
-        // อัพเดตเวลา
         timer += Time.deltaTime;
         if (timer >= changeDirectionTime)
         {
             PickNewDirection();
         }
 
-        // ตรวจสอบไม่ให้ออกนอกขอบเขตน้ำ
         StayInsideArea();
 
-        // ปรับ Sprite ให้หันตามทิศทาง
         FlipSprite();
     }
 
-    // เลือกทิศทางสุ่มใหม่
+    
+    void SetupAreaFromSprite()
+    {
+        if (areaSprite == null)
+        {
+            Debug.LogError("FishMovement: areaSprite is not assigned!");
+            return;
+        }
+
+        Bounds b = areaSprite.bounds;
+
+        minX = b.min.x;
+        maxX = b.max.x;
+        minY = b.min.y;
+        maxY = b.max.y;
+    }
+
     void PickNewDirection()
     {
-        float angle = Random.Range(0f, 360f);  // สุ่มมุม 0–360 องศา
+        float angle = Random.Range(0f, 360f);
         float rad = angle * Mathf.Deg2Rad;
         targetDirection = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
-
         timer = 0f;
     }
 
-    // ทำให้ปลาอยู่ในพื้นที่น้ำ
     void StayInsideArea()
     {
         Vector3 pos = transform.position;
 
         if (pos.x < minX || pos.x > maxX)
         {
-            targetDirection.x = -targetDirection.x;           // เด้งกลับแนวนอน
-            pos.x = Mathf.Clamp(pos.x, minX, maxX);          // อยู่ในขอบ
+            targetDirection.x = -targetDirection.x;
+            pos.x = Mathf.Clamp(pos.x, minX, maxX);
             timer = 0f;
         }
 
         if (pos.y < minY || pos.y > maxY)
         {
-            targetDirection.y = -targetDirection.y;           // เด้งกลับแนวตั้ง
-            pos.y = Mathf.Clamp(pos.y, minY, maxY);          // อยู่ในขอบ
+            targetDirection.y = -targetDirection.y;
+            pos.y = Mathf.Clamp(pos.y, minY, maxY);
             timer = 0f;
         }
 
         transform.position = pos;
     }
 
-    // พลิก Sprite ให้หันตามทิศทาง X
     void FlipSprite()
     {
         if (targetDirection.x == 0) return;
