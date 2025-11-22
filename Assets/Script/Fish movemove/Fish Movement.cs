@@ -2,6 +2,9 @@
 
 public class FishMovement : MonoBehaviour
 {
+    [Header("FishData")]
+    public fish FishIdentity;
+
     [Header("Speed Settings")]
     public float minSpeed = 1f;
     public float maxSpeed = 3f;
@@ -20,7 +23,7 @@ public class FishMovement : MonoBehaviour
 
     void Start()
     {
-        speed = Random.Range(minSpeed, maxSpeed);
+        speed = Random.Range(minSpeed*FishIdentity.ChoasProb, maxSpeed*FishIdentity.ChoasProb);
 
         SetupAreaFromSprite();
 
