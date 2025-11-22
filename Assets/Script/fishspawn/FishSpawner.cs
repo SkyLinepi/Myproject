@@ -3,6 +3,7 @@ using UnityEngine;
 public class FishSpawner : MonoBehaviour
 {
     public GameObject fishPrefab;
+    public fish[] Data;
     public int spawnAmount = 1;
 
     private Bounds bounds;
