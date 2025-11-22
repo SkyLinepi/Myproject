@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class HookMove : MonoBehaviour
 {
     public Rigidbody2D rb2D;
 
