@@ -1,30 +1,44 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FishSpawner : MonoBehaviour
 {
-    public GameObject fishPrefab;
-    public fish[] Data;
-    public int spawnAmount = 1;
+    public GameObject[] fishPrefabs;   
+    public int spawnAmount = 10;       
 
+    private SpriteRenderer areaSprite;
     private Bounds bounds;
 
     void Start()
     {
-        
-        bounds = GetComponent<SpriteRenderer>().bounds;
+        areaSprite = GetComponent<SpriteRenderer>();
+        bounds = areaSprite.bounds;
 
         for (int i = 0; i < spawnAmount; i++)
         {
-            SpawnFishInsideBounds();
+            SpawnRandomFish();
         }
     }
 
-    void SpawnFishInsideBounds()
+    void SpawnRandomFish()
     {
-        float x = Random.Range(bounds.min.x, bounds.max.x);
-        float y = Random.Range(bounds.min.y, bounds.max.y);
+     
+        Vector3 pos = new Vector3(
+            Random.Range(bounds.min.x, bounds.max.x),
+            Random.Range(bounds.min.y, bounds.max.y),
+            0
+        );
 
-        Vector3 pos = new Vector3(x, y, 0);
-        Instantiate(fishPrefab, pos, Quaternion.identity);
+       
+        GameObject prefab = fishPrefabs[Random.Range(0, fishPrefabs.Length)];
+
+        
+        GameObject fishObj = Instantiate(prefab, pos, Quaternion.identity);
+
+       
+        FishMovement movement = fishObj.GetComponent<FishMovement>();
+        if (movement != null)
+        {
+            movement.SetArea(areaSprite);
+        }
     }
 }
