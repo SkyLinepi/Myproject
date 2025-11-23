@@ -16,7 +16,7 @@ public class HookMove : MonoBehaviour
     }
 
     // Update is called once per frame
-     void FixedUpdate()
+    void FixedUpdate()
     {
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorld.z = 0;
@@ -33,6 +33,6 @@ public class HookMove : MonoBehaviour
         {
             rb2D.linearVelocity = Vector2.zero;   // หยุดนิ่ง
         }
-        
-    }   
+
+    }
 }
