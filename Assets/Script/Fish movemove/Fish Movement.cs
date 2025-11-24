@@ -2,13 +2,13 @@
 
 public class FishMovement : MonoBehaviour
 {
+    [Header("FishData")]
+    public fish FishIdentity;
+
     [Header("Speed Settings")]
     public float minSpeed = 1f;
     public float maxSpeed = 3f;
     private float speed;
-
-    [Header("Area Sprite (กรอบพื้นที่ที่ปลาอยู่ได้)")]
-    public SpriteRenderer areaSprite; 
 
     private float minX, maxX, minY, maxY;
 
@@ -18,13 +18,40 @@ public class FishMovement : MonoBehaviour
 
     private Vector2 targetDirection;
 
+
+    private bool facingRightInitially;
+
     void Start()
     {
-        speed = Random.Range(minSpeed, maxSpeed);
 
-        SetupAreaFromSprite();
+        facingRightInitially = transform.localScale.x > 0;
+
+        if (FishIdentity != null)
+        {
+            speed = Random.Range(minSpeed * FishIdentity.ChoasProb,
+                                 maxSpeed * FishIdentity.ChoasProb);
+        }
+        else
+        {
+            speed = Random.Range(minSpeed, maxSpeed);
+        }
 
         PickNewDirection();
+    }
+
+    public void SetArea(SpriteRenderer area)
+    {
+        Bounds b = area.bounds;
+
+        minX = b.min.x;
+        maxX = b.max.x;
+        minY = b.min.y;
+        maxY = b.max.y;
+    }
+
+    public void SetFishData(fish data)
+    {
+        FishIdentity = data;
     }
 
     void Update()
@@ -38,25 +65,7 @@ public class FishMovement : MonoBehaviour
         }
 
         StayInsideArea();
-
         FlipSprite();
-    }
-
-    
-    void SetupAreaFromSprite()
-    {
-        if (areaSprite == null)
-        {
-            Debug.LogError("FishMovement: areaSprite is not assigned!");
-            return;
-        }
-
-        Bounds b = areaSprite.bounds;
-
-        minX = b.min.x;
-        maxX = b.max.x;
-        minY = b.min.y;
-        maxY = b.max.y;
     }
 
     void PickNewDirection()
@@ -90,10 +99,16 @@ public class FishMovement : MonoBehaviour
 
     void FlipSprite()
     {
-        if (targetDirection.x == 0) return;
-
-        Vector3 scale = transform.localScale;
-        scale.x = (targetDirection.x > 0) ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
-        transform.localScale = scale;
+        if (targetDirection.x > 0)   
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (targetDirection.x < 0)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
     }
 }
+
+
+
