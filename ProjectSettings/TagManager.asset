@@ -12,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Waterinteraction
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: SortingTexture
     uniqueID: 1033878207
+    locked: 0
+  - name: 2
+    uniqueID: 366776621
     locked: 0
   m_RenderingLayers:
   - Default

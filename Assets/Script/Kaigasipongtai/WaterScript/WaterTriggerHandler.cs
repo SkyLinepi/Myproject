@@ -31,12 +31,14 @@ public class WaterTriggerHandler  : MonoBehaviour
                 if (collision.transform.position.y >= _edgeColl.points[1].y + _edgeColl.offset.y + loaclePos.y)
                 {
                     // วัตถุชนจากด้านบน
-                    spawnPos = hitObjectPos - new Vector2(0f, hitObjectBounds.extents.y);            
+                    spawnPos = hitObjectPos - new Vector2(0f, hitObjectBounds.extents.y);
+                    Debug.Log("Hit from Top");            
                 }
                 else
                 {
                     // วัตถุชนจากด้านล่าง
                     spawnPos = hitObjectPos + new Vector2(0f, hitObjectBounds.extents.y);
+                    Debug.Log("Hit from Bottom");
                 }           
 
                 Instantiate(_splashParticles, spawnPos, Quaternion.identity);
