@@ -8,6 +8,7 @@ public class HookMove : MonoBehaviour
     public float force = 1f;
 
     public float DistanceToMouse;
+    private Vector3 MousePos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,17 +19,26 @@ public class HookMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        GetMousePos();
+        swingThatShit();
+        //Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //mouseWorld.z = 0;
+        //Vector2 direction = (mouseWorld - transform.position).normalized;
+        //rb2D.AddForce(direction * force);
+        //DistanceToMouse = Vector2.Distance(transform.position, mouseWorld);
+    }
+
+    public void swingThatShit()
+    {
+        Vector2 direction = (MousePos - transform.position).normalized;
+        rb2D.AddForce(direction * force);
+        DistanceToMouse = Vector2.Distance(transform.position, MousePos);
+    }
+
+    public void GetMousePos()
+    {
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorld.z = 0;
-
-        Vector2 direction = (mouseWorld - transform.position).normalized;
-
-        // ไล่ตามเมาส์s
-        rb2D.AddForce(direction * force);
-
-        DistanceToMouse = Vector2.Distance(transform.position, mouseWorld);
-
-        
-
+        MousePos = mouseWorld;
     }
 }
