@@ -28,11 +28,7 @@ public class HookMove : MonoBehaviour
 
         DistanceToMouse = Vector2.Distance(transform.position, mouseWorld);
 
-        // ถ้าเข้าใกล้มากเกินไป → เบรก
-        if (DistanceToMouse < 0.5f)
-        {
-            rb2D.linearVelocity = Vector2.zero;   // หยุดนิ่ง
-        }
+        
 
     }
 }

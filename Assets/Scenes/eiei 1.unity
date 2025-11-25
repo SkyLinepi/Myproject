@@ -2229,8 +2229,8 @@ Transform:
   m_GameObject: {fileID: 1433550714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.718164, y: -41.2, z: 0}
-  m_LocalScale: {x: 4.3113027, y: 2.902947, z: 55.921204}
+  m_LocalPosition: {x: -10.253157, y: -87.04991, z: 0}
+  m_LocalScale: {x: 4.3113027, y: 6.3282185, z: 55.921204}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2250,8 +2250,8 @@ MonoBehaviour:
   _springConstant: 1.4
   _damping: 1.1
   _spread: 6.5
-  _wavePropagationInteraction: 8
-  _spreadMult: 5.5
+  _wavePropagationInteraction: 10
+  _spreadMult: 10
   ForceMultiplier: 0.2
   MaxForce: 50
   _playerCollisionRadiusMultiplier: 4.15
@@ -2306,7 +2306,7 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2629,8 +2629,8 @@ Transform:
   m_GameObject: {fileID: 1948266681}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1841, y: 12.700002, z: 0}
-  m_LocalScale: {x: 7.3192973, y: 1.65, z: 1}
+  m_LocalPosition: {x: -1.1841, y: 14.200001, z: 0}
+  m_LocalScale: {x: 7.3192973, y: 1.910469, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
