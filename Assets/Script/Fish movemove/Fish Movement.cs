@@ -108,6 +108,19 @@ public class FishMovement : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D Hook)
+    {
+        if(Hook.gameObject.CompareTag("Hook"))
+        {
+            Hooked();
+        }
+    }
+
+    public void Hooked()
+    {
+        
+    }
 }
 
 

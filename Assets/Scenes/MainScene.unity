@@ -760,6 +760,7 @@ MonoBehaviour:
   rodTip: {fileID: 934804645}
   hookRb: {fileID: 1762374703}
   maxLineLength: 20
+  minimumLength: 1
 --- !u!114 &1762374701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,8 +826,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0.32
-  m_AngularDamping: 0.05
-  m_GravityScale: 0.57
+  m_AngularDamping: 1.82
+  m_GravityScale: 1.59
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
