@@ -28,6 +28,7 @@ public class FishMovement : MonoBehaviour
 
         if (FishIdentity != null)
         {
+            //Debug.Log("doit");
             speed = Random.Range(minSpeed * FishIdentity.ChoasProb,
                                  maxSpeed * FishIdentity.ChoasProb);
         }
