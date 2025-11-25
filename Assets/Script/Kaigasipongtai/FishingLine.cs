@@ -6,6 +6,9 @@ public class FishingLine2D : MonoBehaviour
     public Rigidbody2D hookRb;        // Hook/Bobber Rigidbody2D
     public float maxLineLength = 5f;
 
+    [SerializeField] public static float shrinkSpeed = 5f;
+    public float minimumLength = 1f;
+
     private LineRenderer lineRenderer;
 
     void Start()
@@ -18,6 +21,10 @@ public class FishingLine2D : MonoBehaviour
     {
         ClampPhysics2D();
         DrawLine();
+        if (Input.GetMouseButton(1))
+        {
+            ShrinkLineLength(Time.deltaTime);
+        }
     }
 
     void DrawLine()
@@ -25,6 +32,12 @@ public class FishingLine2D : MonoBehaviour
         lineRenderer.SetPosition(0, rodTip.position);
         lineRenderer.SetPosition(1, hookRb.position);
     }
+    public void ShrinkLineLength(float deltaTime)
+    {
+        maxLineLength -= shrinkSpeed * deltaTime;
+        maxLineLength = Mathf.Max(maxLineLength, minimumLength);
+    }
+
 
     void ClampPhysics2D()
     {
