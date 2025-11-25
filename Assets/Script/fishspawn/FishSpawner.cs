@@ -2,8 +2,10 @@
 
 public class FishSpawner : MonoBehaviour
 {
-    public GameObject[] fishPrefabs;   
+    public GameObject fishPrefabs;
+    public fish[] FishData;
     public int spawnAmount = 10;       
+    private fish ChosenData;
 
     private SpriteRenderer areaSprite;
     private Bounds bounds;
@@ -15,6 +17,7 @@ public class FishSpawner : MonoBehaviour
 
         for (int i = 0; i < spawnAmount; i++)
         {
+            RandomFishData();
             SpawnRandomFish();
         }
     }
@@ -27,18 +30,20 @@ public class FishSpawner : MonoBehaviour
             Random.Range(bounds.min.y, bounds.max.y),
             0
         );
-
-       
-        GameObject prefab = fishPrefabs[Random.Range(0, fishPrefabs.Length)];
-
-        
-        GameObject fishObj = Instantiate(prefab, pos, Quaternion.identity);
-
+ 
+        GameObject fishObj = Instantiate(fishPrefabs, pos, Quaternion.identity);
        
         FishMovement movement = fishObj.GetComponent<FishMovement>();
         if (movement != null)
         {
+            movement.FishIdentity = ChosenData;
             movement.SetArea(areaSprite);
         }
+    }
+
+    public void RandomFishData()
+    {
+        fish ChoseFishData = FishData[Random.Range(0, FishData.Length)];
+        ChosenData = ChoseFishData;
     }
 }

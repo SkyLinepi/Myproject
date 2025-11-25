@@ -454,6 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
   fishPrefabs:
   - {fileID: 7676660695452991876, guid: 11eba256993efbe4491d3cd39ed9a271, type: 3}
+  FishData: []
   spawnAmount: 50
 --- !u!212 &1420087447
 SpriteRenderer:
@@ -546,7 +547,7 @@ GameObject:
   - component: {fileID: 1762374698}
   m_Layer: 1
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: Hook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -759,7 +760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishingLine
   rodTip: {fileID: 934804645}
   hookRb: {fileID: 1762374703}
-  maxLineLength: 20
+  maxLineLength: 41
   minimumLength: 1
 --- !u!114 &1762374701
 MonoBehaviour:
