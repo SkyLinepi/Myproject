@@ -3,23 +3,43 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public fish fishdata;
-    private GameObject W;
-    private GameObject A;
-    private GameObject S;
-    private GameObject D;
-    private GameObject WA;
-    private GameObject WD;
-    private GameObject AS;
-    private GameObject DS;
+    public bool fishIsCaught;
+    private float shuffleTimer;
+    public GameObject[] directions;
 
-    public void Update()
+    private bool miniGameActive = false;
+
+    public void TriggerMiniGame(fish fishCaught)
     {
-        
+        fishdata = fishCaught;
+        fishIsCaught = false;
+        miniGameActive = true;
+
+        SetShuffleTime();
+        FishPullDirection();
     }
 
-    static void TriggerMiniGame(fish fishCaught)
+    void Update()
     {
-        
+        if (!miniGameActive || fishIsCaught) return;
+
+        shuffleTimer -= Time.deltaTime;
+
+        if (shuffleTimer <= 0f)
+        {
+            FishPullDirection();
+            SetShuffleTime();
+        }
     }
 
+    void FishPullDirection()
+    {
+        GameObject chosenDirection = directions[Random.Range(0, directions.Length)];
+        Debug.Log("Direction: " + chosenDirection.name);
+    }
+
+    void SetShuffleTime()
+    {
+        shuffleTimer = Random.Range(fishdata.ShortestShuffle, fishdata.LongestShuffle);
+    }
 }
