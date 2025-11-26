@@ -452,9 +452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca40acbe5c145840b95638c14162cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
-  fishPrefabs:
-  - {fileID: 7676660695452991876, guid: 11eba256993efbe4491d3cd39ed9a271, type: 3}
-  FishData: []
+  fishPrefabs: {fileID: 7676660695452991876, guid: 11eba256993efbe4491d3cd39ed9a271, type: 3}
+  FishData:
+  - {fileID: 11400000, guid: e4a492b3973394f49a67dd10efc4a267, type: 2}
+  - {fileID: 11400000, guid: c72425e1700679f4099b10f839a3a0ce, type: 2}
   spawnAmount: 50
 --- !u!212 &1420087447
 SpriteRenderer:

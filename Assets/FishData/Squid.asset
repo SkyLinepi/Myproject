@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Squid
   fishPic: {fileID: 21300000, guid: d9b390233daa78a4d83a22a86dba88b7, type: 3}
-  ChoasProb: 2
+  ChoasProb: 22.44
   ShortestShuffle: 0.3
   LongestShuffle: 0.6
   AttemptBeforeCD: 8

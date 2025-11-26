@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public fish fishdata;
+    private GameObject W;
+    private GameObject A;
+    private GameObject S;
+    private GameObject D;
+    private GameObject WA;
+    private GameObject WD;
+    private GameObject AS;
+    private GameObject DS;
+
+    public void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    static void TriggerMiniGame(fish fishCaught)
     {
         
     }
+
 }
