@@ -5,7 +5,7 @@ public class HookMove : MonoBehaviour
 {
     public Rigidbody2D rb2D;
 
-    public float force = 1f;
+    public float force = 1f * Shop.SpeedLevel;
 
     public float DistanceToMouse;
     private Vector3 MousePos;
@@ -21,6 +21,8 @@ public class HookMove : MonoBehaviour
     {
         GetMousePos();
         swingThatShit();
+        force = 1f * Shop.SpeedLevel;
+        
         //Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //mouseWorld.z = 0;
         //Vector2 direction = (mouseWorld - transform.position).normalized;

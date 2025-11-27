@@ -63,16 +63,16 @@ Material:
     - _CausticScale: 40.5
     - _CausticStrength: 1.26
     - _CausuticOffsetSpeed: 7.31
-    - _DistortionOffsetSpeed: 5.54
-    - _DistortionScale: 17.4
-    - _DistortionStrength: -0.0033
+    - _DistortionOffsetSpeed: 7.16
+    - _DistortionScale: 21.3
+    - _DistortionStrength: 38.4
     - _LineLength: 0.988
-    - _WaveCount: 2.9
-    - _WaveFlowDirection: 1
-    - _WaveSize: 0.269
-    - _WaveSpeed: 3.82
+    - _WaveCount: 11.7
+    - _WaveFlowDirection: 0.13
+    - _WaveSize: 0.5
+    - _WaveSpeed: 1.98
     m_Colors:
-    - _BodyColor: {r: 0.22745094, g: 0.3568627, b: 0.45098042, a: 0.5411765}
+    - _BodyColor: {r: 0.2274509, g: 0.35686266, b: 0.45098042, a: 0.3137255}
     - _CacusticColor: {r: 0.128649, g: 0.3292528, b: 0.5566038, a: 0.53333336}
     - _CacusticScrollDir: {r: 0.045, g: 0, b: 0, a: 0}
     - _CausticTiling: {r: 0.5, g: 1.5, b: 0, a: 0}
