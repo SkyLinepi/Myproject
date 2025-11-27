@@ -19,3 +19,4 @@ MonoBehaviour:
   LongestShuffle: 0.6
   AttemptBeforeCD: 8
   CooldowbDuration: 2
+  Sellprice: 100

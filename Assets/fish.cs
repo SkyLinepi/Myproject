@@ -11,4 +11,5 @@ public class fish : ScriptableObject
     public float LongestShuffle;
     public int AttemptBeforeCD;
     public float CooldowbDuration;
+    public int Sellprice;//อันนี้นะไอสัสบอล
 }
