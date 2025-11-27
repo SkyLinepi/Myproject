@@ -8,7 +8,7 @@ public class Shop : MonoBehaviour
     static public int SpeedLevel = 1;
 
     static public int calculatePriceLine;
-    static public int calculatePriceStrength;
+    static public int calculatePriceStrength = 10;
     static public int calculatePriceSpeed;
 
     public void UpgardeLine()
@@ -26,7 +26,7 @@ public class Shop : MonoBehaviour
     }
     public void UpgardeSpeed()
     {
-        calculatePriceLine += SpeedLevel*50;
+        calculatePriceSpeed += SpeedLevel*50;
         SpeedLevel++;
         Debug.Log(SpeedLevel);
     }
