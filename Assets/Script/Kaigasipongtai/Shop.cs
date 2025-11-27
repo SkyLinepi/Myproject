@@ -3,27 +3,30 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
 
-    static public int LineLevel = 2;
-    static public int PullLevel = 1;
-    static public int SpeedLevel = 2;
-    static int count = 30;
+    static public int LineLevel = 1;
+    static public int StrengthLevel = 1;
+    static public int SpeedLevel = 1;
+
+    static public int calculatePriceLine;
+    static public int calculatePriceStrength;
+    static public int calculatePriceSpeed;
+
     public void UpgardeLine()
     {
-        float calculatePrice =  LineLevel *2f ;
+        calculatePriceLine += LineLevel*50;
         LineLevel++;
         Debug.Log(LineLevel);
     }
     public void UpgardeStrength()
     {
-        float calculatePrice =  PullLevel* 1.5f;
-        PullLevel++;
-        Debug.Log(PullLevel);
+        calculatePriceStrength += StrengthLevel*50;
+        StrengthLevel++;
+        Debug.Log(StrengthLevel);
     }
     public void UpgardeSpeed()
     {
-        float calculatePrice =  SpeedLevel * 0.5f;
+        calculatePriceLine += SpeedLevel*50;
         SpeedLevel++;
-        
         Debug.Log(SpeedLevel);
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine.EventSystems; // ต้องใช้ namespace นี้
 public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     // ตัวแปรสำหรับเก็บราคาของไอเท็มนี้
-    public string 
 
     // ตัวแปรสำหรับอ้างอิงถึง Tooltip Manager (ต้องลากมาใส่ใน Inspector)
     public TooltipManager tooltipManager;
@@ -13,7 +12,7 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerEnter(PointerEventData eventData)
     {
         // สั่งให้ Tooltip Manager แสดง Tooltip พร้อมส่งข้อมูลราคา
-        tooltipManager.ShowTooltip(itemPrice);
+        tooltipManager.ShowTooltip(Shop.calculatePriceLine.ToString());
     }
 
     // ฟังก์ชันนี้จะถูกเรียกทันทีเมื่อเมาส์ออกจากขอบเขตของวัตถุ
