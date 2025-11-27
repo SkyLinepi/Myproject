@@ -2051,12 +2051,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655701431}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1042.0161, y: 427.4759, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1046.2738, y: 427.90112, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1164434295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &669577119
 GameObject:
@@ -2484,7 +2484,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8686c30fe968c644a95a5e1ff23d4286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
-  itemPrice: 100 COINS
   tooltipManager: {fileID: 655701432}
 --- !u!1 &808047793
 GameObject:
@@ -4072,7 +4071,9 @@ Transform:
   m_LocalPosition: {x: -4.2577, y: -0.42522, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 655701433}
+  - {fileID: 1987530676}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1164434297
@@ -6758,12 +6759,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987530675}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.62507, y: -7.80213, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6326299, y: -7.37691, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1164434295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1987530677
 MonoBehaviour:
@@ -7233,9 +7234,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 934804645}
   - {fileID: 1164434295}
-  - {fileID: 1987530676}
   - {fileID: 1070367663}
   - {fileID: 74583529}
   - {fileID: 210094791}
   - {fileID: 158095094}
-  - {fileID: 655701433}

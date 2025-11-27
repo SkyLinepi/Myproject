@@ -20,6 +20,7 @@ public class Shop : MonoBehaviour
     public void UpgardeStrength()
     {
         calculatePriceStrength += StrengthLevel*50;
+        Debug.Log(calculatePriceStrength);
         StrengthLevel++;
         Debug.Log(StrengthLevel);
     }
