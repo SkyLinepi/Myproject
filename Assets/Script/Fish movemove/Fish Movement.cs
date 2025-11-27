@@ -17,12 +17,16 @@ public class FishMovement : MonoBehaviour
     private float timer;
 
     private Vector2 targetDirection;
+    private SpriteRenderer spriteRenderer;
 
 
     private bool facingRightInitially;
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = FishIdentity.fishPic;
+
 
         facingRightInitially = transform.localScale.x > 0;
 

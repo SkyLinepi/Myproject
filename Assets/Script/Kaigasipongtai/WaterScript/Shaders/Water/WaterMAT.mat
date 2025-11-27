@@ -31,7 +31,8 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -67,6 +68,8 @@ Material:
     - _DistortionScale: 21.3
     - _DistortionStrength: 38.4
     - _LineLength: 0.988
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _WaveCount: 11.7
     - _WaveFlowDirection: 0.13
     - _WaveSize: 0.5

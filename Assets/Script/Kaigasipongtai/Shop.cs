@@ -16,6 +16,7 @@ public class Shop : MonoBehaviour
     {
         calculatePriceLine += LineLevel*20;
         LineLevel++;
+        FishingLine2D.maxLineLength = 5f * LineLevel;
         Debug.Log(LineLevel);
     }
     public void UpgardeStrength()
@@ -31,4 +32,5 @@ public class Shop : MonoBehaviour
         SpeedLevel++;
         Debug.Log(SpeedLevel);
     }
+
 }

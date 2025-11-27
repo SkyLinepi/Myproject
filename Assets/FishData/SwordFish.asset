@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb641b02803b2f64eb9ecce70df534c4, type: 3}
-  m_Name: angler
+  m_Name: SwordFish
   m_EditorClassIdentifier: Assembly-CSharp::fish
-  name: angler
-  fishPic: {fileID: -2985943229912152860, guid: e16c2c147adc1ff4a898ad93836889f4, type: 3}
-  maxFishPatience: 8
-  ChoasProb: 4
-  ShortestShuffle: 0.5
-  LongestShuffle: 2
-  AttemptBeforeCD: 4
-  CooldowbDuration: 1
-  Sellprice: 180
+  name: SwordFish
+  fishPic: {fileID: -7379534829552286789, guid: efe0c939b3e6d1e4b9cabd922662b566, type: 3}
+  maxFishPatience: 27.2
+  ChoasProb: 7
+  ShortestShuffle: 1.6
+  LongestShuffle: 3
+  AttemptBeforeCD: 7
+  CooldowbDuration: 9
+  Sellprice: 200

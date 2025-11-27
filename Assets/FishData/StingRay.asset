@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb641b02803b2f64eb9ecce70df534c4, type: 3}
   m_Name: StingRay
   m_EditorClassIdentifier: Assembly-CSharp::fish
-  name: 
-  fishPic: {fileID: 0}
-  ChoasProb: 0
-  ShortestShuffle: 0
-  LongestShuffle: 0
-  AttemptBeforeCD: 0
-  CooldowbDuration: 0
-  Sellprice: 0
+  name: JellyiyFish
+  fishPic: {fileID: -5049841242315071939, guid: c44e417819832e3438800d1df087d1e3, type: 3}
+  maxFishPatience: 11.04
+  ChoasProb: 7
+  ShortestShuffle: 1.6
+  LongestShuffle: 3
+  AttemptBeforeCD: 7
+  CooldowbDuration: 9
+  Sellprice: 200
