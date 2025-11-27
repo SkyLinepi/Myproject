@@ -2575,7 +2575,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 772035538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8686c30fe968c644a95a5e1ff23d4286, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c2c0da04748e7d4aa58dbecb8e7503c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
   tooltipManager: {fileID: 655701432}
@@ -4246,6 +4246,7 @@ MonoBehaviour:
   - {fileID: 1255666385}
   - {fileID: 356797263}
   PullStrength: 0
+  FIshNaja: {fileID: 0}
 --- !u!4 &1164434295
 Transform:
   m_ObjectHideFlags: 0
@@ -5850,7 +5851,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1640505606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8686c30fe968c644a95a5e1ff23d4286, type: 3}
+  m_Script: {fileID: 11500000, guid: bac6b0e0b697ddd4b90dc6d45d9634ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
   tooltipManager: {fileID: 655701432}
@@ -6843,7 +6844,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1819072890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8686c30fe968c644a95a5e1ff23d4286, type: 3}
+  m_Script: {fileID: 11500000, guid: 6713cc66a82a58b4e9fbc24e9e84317d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
   tooltipManager: {fileID: 655701432}
@@ -7222,7 +7223,7 @@ GameObject:
   - component: {fileID: 2042301165}
   - component: {fileID: 2042301168}
   - component: {fileID: 2042301167}
-  - component: {fileID: 2042301166}
+  - component: {fileID: 2042301169}
   m_Layer: 0
   m_Name: PriceText3
   m_TagString: Untagged
@@ -7249,19 +7250,6 @@ RectTransform:
   m_AnchoredPosition: {x: 87.5, y: 17.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2042301166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042301164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bead9e926efadf4f80fc4a59515bff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  priceText: {fileID: 2042301167}
 --- !u!114 &2042301167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7304,6 +7292,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042301164}
   m_CullTransparentMesh: 1
+--- !u!114 &2042301169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042301164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e6c2b095fcbc74b93f497af3d566f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::priceYolo3
+  priceText: {fileID: 2042301167}
 --- !u!1 &2067291352
 GameObject:
   m_ObjectHideFlags: 0
