@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public bool fishIsCaught;
     private float shuffleTimer;
     public GameObject[] directions;
+    public float PullStrength;
 
     private bool miniGameActive = false;
 
