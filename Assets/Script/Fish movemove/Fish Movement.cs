@@ -120,7 +120,7 @@ public class FishMovement : MonoBehaviour
 
     public void Hooked()
     {
-        
+        FindObjectOfType<GameManager>().TriggerMiniGame(FishIdentity);
     }
 }
 

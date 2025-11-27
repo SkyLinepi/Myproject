@@ -14,17 +14,13 @@ public class TooltipTrigger2 : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerEnter(PointerEventData eventData)
     {
         // สั่งให้ Tooltip Manager แสดง Tooltip พร้อมส่งข้อมูลราคา
-        tooltipManager.ShowTooltip(Shop.calculatePriceStrength.ToString());
         tooltipManager.ShowTooltip2(Shop.calculatePriceLine.ToString());
-        tooltipManager.ShowTooltip3(Shop.calculatePriceSpeed.ToString());
     }
 
     // ฟังก์ชันนี้จะถูกเรียกทันทีเมื่อเมาส์ออกจากขอบเขตของวัตถุ
     public void OnPointerExit(PointerEventData eventData)
     {
         // สั่งให้ Tooltip Manager ซ่อน Tooltip
-        tooltipManager.HideTooltip();
         tooltipManager.HideTooltip2();
-        tooltipManager.HideTooltip3();
     }
 }

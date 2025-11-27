@@ -7,12 +7,17 @@ public class GameManager : MonoBehaviour
     private float shuffleTimer;
     public GameObject[] directions;
     public float PullStrength;
+    public GameObject FIshNaja;
 
     private bool miniGameActive = false;
+    static public GameObject direct;
 
     public void TriggerMiniGame(fish fishCaught)
     {
         fishdata = fishCaught;
+        FIshNaja.SetActive(true);
+        SpriteRenderer sr = FIshNaja.GetComponent<SpriteRenderer>();
+        sr.sprite = fishdata.fishPic;
         fishIsCaught = false;
         miniGameActive = true;
 
