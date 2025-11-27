@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI; 
 
-public class priceYolo : MonoBehaviour
+public class priceYolo1 : MonoBehaviour
 {
     public Text priceText;
     void FixedUpdate()

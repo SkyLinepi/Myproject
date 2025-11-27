@@ -15,6 +15,8 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         // สั่งให้ Tooltip Manager แสดง Tooltip พร้อมส่งข้อมูลราคา
         tooltipManager.ShowTooltip(Shop.calculatePriceStrength.ToString());
+        tooltipManager.ShowTooltip(Shop.calculatePriceLine.ToString());
+        tooltipManager.ShowTooltip(Shop.calculatePriceSpeed.ToString());
     }
 
     // ฟังก์ชันนี้จะถูกเรียกทันทีเมื่อเมาส์ออกจากขอบเขตของวัตถุ
