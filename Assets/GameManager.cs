@@ -9,17 +9,23 @@ public class GameManager : MonoBehaviour
     public float PullStrength;
     public GameObject FIshNaja;
 
-    private bool miniGameActive = false;
+    static public bool miniGameActive = false;
     static public GameObject direct;
+    private float MaxFishPatience;
+    static public float fishPatience;
+    public float patienceDrainRate = 1f;
 
     public void TriggerMiniGame(fish fishCaught)
     {
         fishdata = fishCaught;
+        MaxFishPatience = fishdata.maxFishPatience;
+        fishPatience = MaxFishPatience;
         FIshNaja.SetActive(true);
         SpriteRenderer sr = FIshNaja.GetComponent<SpriteRenderer>();
         sr.sprite = fishdata.fishPic;
         fishIsCaught = false;
         miniGameActive = true;
+        
 
         SetShuffleTime();
         FishPullDirection();
@@ -28,7 +34,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (!miniGameActive || fishIsCaught) return;
-
         shuffleTimer -= Time.deltaTime;
 
         if (shuffleTimer <= 0f)
@@ -47,5 +52,19 @@ public class GameManager : MonoBehaviour
     void SetShuffleTime()
     {
         shuffleTimer = Random.Range(fishdata.ShortestShuffle, fishdata.LongestShuffle);
+    }
+
+    void BurningTime()
+    {
+        fishPatience -= patienceDrainRate * Time.deltaTime;
+        if(fishPatience == 0)
+        {
+            fckyouiamOut();
+        }
+    }
+
+    void fckyouiamOut()
+    {
+        
     }
 }

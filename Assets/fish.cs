@@ -5,6 +5,7 @@ public class fish : ScriptableObject
 {
     public string name;
     public Sprite fishPic;
+    public float maxFishPatience;
 
     public float ChoasProb;
     public float ShortestShuffle;
