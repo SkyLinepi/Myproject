@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems; // ต้องใช้ namespace นี้
 
-public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class TooltipTrigger3 : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     // ตัวแปรสำหรับเก็บราคาของไอเท็มนี้
     //string price = "100 ";

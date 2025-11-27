@@ -10,7 +10,7 @@ public class Shop : MonoBehaviour
 
     static public int calculatePriceLine = 2;
     static public int calculatePriceStrength = 10;
-    static public int calculatePriceSpeed = 2;
+    static public int calculatePriceSpeed = 4;
 
     public void UpgardeLine()
     {
