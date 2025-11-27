@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb641b02803b2f64eb9ecce70df534c4, type: 3}
-  m_Name: Squid
+  m_Name: StingRay
   m_EditorClassIdentifier: Assembly-CSharp::fish
-  name: Squid
-  fishPic: {fileID: 21300000, guid: d9b390233daa78a4d83a22a86dba88b7, type: 3}
-  ChoasProb: 22.44
-  ShortestShuffle: 0.3
-  LongestShuffle: 0.6
-  AttemptBeforeCD: 8
-  CooldowbDuration: 2
-  Sellprice: 100
+  name: 
+  fishPic: {fileID: 0}
+  ChoasProb: 0
+  ShortestShuffle: 0
+  LongestShuffle: 0
+  AttemptBeforeCD: 0
+  CooldowbDuration: 0
+  Sellprice: 0

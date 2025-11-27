@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb641b02803b2f64eb9ecce70df534c4, type: 3}
+  m_Name: angler
+  m_EditorClassIdentifier: Assembly-CSharp::fish
+  name: angler
+  fishPic: {fileID: -2985943229912152860, guid: e16c2c147adc1ff4a898ad93836889f4, type: 3}
+  ChoasProb: 4
+  ShortestShuffle: 0.5
+  LongestShuffle: 2
+  AttemptBeforeCD: 4
+  CooldowbDuration: 1
+  Sellprice: 180

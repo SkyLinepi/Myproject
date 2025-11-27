@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb641b02803b2f64eb9ecce70df534c4, type: 3}
-  m_Name: SwordFish
+  m_Name: pufferFish
   m_EditorClassIdentifier: Assembly-CSharp::fish
-  name: SwordFish
-  fishPic: {fileID: 21300000, guid: 72250dd0af8db5e4da2979112d1bcc52, type: 3}
+  name: pufferFish
+  fishPic: {fileID: 21300000, guid: d9b390233daa78a4d83a22a86dba88b7, type: 3}
   ChoasProb: 1.5
-  ShortestShuffle: 0.5
+  ShortestShuffle: 1.4
   LongestShuffle: 2
-  AttemptBeforeCD: 4
-  CooldowbDuration: 1
-  Sellprice: 120
+  AttemptBeforeCD: 8
+  CooldowbDuration: 2
+  Sellprice: 100
