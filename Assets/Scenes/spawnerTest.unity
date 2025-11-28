@@ -697,7 +697,7 @@ MonoBehaviour:
   spawnAmount: 10
   specialFishPrefab: {fileID: 1022290634}
   SpecialFishData: {fileID: 11400000, guid: e4a492b3973394f49a67dd10efc4a267, type: 2}
-  eventInterval: 20
+  eventInterval: 5
   respawnDelay: 3
 --- !u!1 &1540289919
 GameObject:
