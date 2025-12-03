@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(STaticBS.GameStarted);
         if (!miniGameActive || fishIsCaught) return;
         shuffleTimer -= Time.deltaTime;
 

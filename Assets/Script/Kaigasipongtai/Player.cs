@@ -22,7 +22,9 @@ public class Player : MonoBehaviour
         float moveXInput = Input.GetAxis("Horizontal");
         float moveYInput = Input.GetAxis("Vertical");
         Vector2 direction = new Vector2(moveXInput, moveYInput).normalized;
-        rb2D.AddForce(direction * force);
+        rb2D.linearVelocity = direction.normalized * force;
+        bool CheckMove = direction.sqrMagnitude > 0.01f;
+        _animator.SetBool("isMoveing", CheckMove);
     }
 
     public void Flip()
@@ -68,6 +70,7 @@ public class Player : MonoBehaviour
         {
             Flip();
         }
+        
         
     }
 }
