@@ -4,6 +4,7 @@ public class StartUpDown : MonoBehaviour
 {
     public float speed = 2f;
     public float height = 1f;
+    public Transform PlayerStartPosition;
 
     private Vector3 startPos;
 
@@ -24,5 +25,10 @@ public class StartUpDown : MonoBehaviour
             
         }
 
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = PlayerStartPosition.position;
     }
 }
