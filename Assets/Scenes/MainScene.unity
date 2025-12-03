@@ -3183,7 +3183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 266.5, y: 179.3}
+  m_AnchoredPosition: {x: 246.6, y: 192.49}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669577121
@@ -5688,7 +5688,7 @@ Transform:
   m_GameObject: {fileID: 1826938423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.4, y: -114.8, z: 0}
+  m_LocalPosition: {x: -27.9189, y: -203.7261, z: 0}
   m_LocalScale: {x: 1.4875422, y: 3.4040647, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5860,7 +5860,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1875, y: 1.5625}
+    oldSize: {x: 1.5, y: 0.6875}
     newSize: {x: 1.1875, y: 1.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
