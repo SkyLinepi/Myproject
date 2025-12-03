@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject DIVE;
+    
+    
+    public GameObject OnOfShopAndPlayButton; // ใส่ OnOf ใน Inspector
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -20,5 +23,11 @@ public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointer
     public void setBool()
     {
         STaticBS.GameStarted = true;
+        
+        // ซ่อนปุ่ม OnOfShopAndPlayButton เมื่อกดปุ่มนี้
+        if (OnOfShopAndPlayButton != null)
+        {
+            OnOfShopAndPlayButton.SetActive(false);
+        }
     }
 }
