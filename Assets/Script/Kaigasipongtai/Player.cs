@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     private Vector2 input;
     private Vector2 lastMoveDirection;
     private bool facingLeft = true;
+    public Vector3 MousePosition;
+    public GameObject ArrowIndicator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,6 +60,16 @@ public class Player : MonoBehaviour
         _animator.SetFloat("MoveMagnitude", input.sqrMagnitude);
         _animator.SetFloat("LastMoveX", lastMoveDirection.x);
         _animator.SetFloat("LastMoveY", lastMoveDirection.y);
+    }
+
+    public void preparedHook()
+    {
+        
+    }
+
+    public void ShootHook()
+    {
+        
     }
 
     // Update is called once per frame

@@ -3156,7 +3156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9528302, g: 0.3604184, b: 0, a: 1}
+  m_Color: {r: 0.30980393, g: 0.77254903, b: 0.99607843, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3240,7 +3240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.6154708, b: 0, a: 1}
+  m_Color: {r: 0.007843138, g: 0.08235294, b: 0.18431373, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3523,6 +3523,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669577119}
   m_CullTransparentMesh: 1
+--- !u!1 &671696751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671696752}
+  - component: {fileID: 671696753}
+  m_Layer: 0
+  m_Name: ArrowCon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &671696752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671696751}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1164434295}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &671696753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671696751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbfb16fa3b883b4786e39fa45bdc9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::arrowtrack
+  player: {fileID: 1977421028}
+  orbitRadius: 5.34
+  arrow: {fileID: 1047772180}
 --- !u!1 &758799949
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,6 +4193,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934857838}
   m_CullTransparentMesh: 1
+--- !u!1 &1047772178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 799128042717058051, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+  m_PrefabInstance: {fileID: 1148621280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1047772180 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+  m_PrefabInstance: {fileID: 1148621280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1054442388
 GameObject:
   m_ObjectHideFlags: 0
@@ -4507,6 +4564,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122913997}
   m_CullTransparentMesh: 1
+--- !u!1001 &1148621280
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 17.470823
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 17.470823
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 17.470823
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176669232977565392, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 679764206137346259, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 679764206137346259, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799128042717058051, guid: 090727e704c42c346b68368d5700cde1, type: 3}
+      propertyPath: m_Name
+      value: Arrow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 090727e704c42c346b68368d5700cde1, type: 3}
 --- !u!1 &1164434293
 GameObject:
   m_ObjectHideFlags: 0
@@ -4564,6 +4698,7 @@ Transform:
   - {fileID: 445999952}
   - {fileID: 655701433}
   - {fileID: 1987530676}
+  - {fileID: 671696752}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1164434297
@@ -5156,7 +5291,7 @@ GameObject:
   - component: {fileID: 1404067968}
   m_Layer: 0
   m_Name: Main camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6649,6 +6784,8 @@ MonoBehaviour:
   _animator: {fileID: 1977421026}
   rb2D: {fileID: 1977421030}
   force: 10
+  MousePosition: {x: 0, y: 0, z: 0}
+  ArrowIndicator: {fileID: 1047772178}
 --- !u!114 &1977421032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7053,7 +7190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.41960785, b: 0, a: 1}
+  m_Color: {r: 0.09803922, g: 0.30588236, b: 0.4745098, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7340,3 +7477,4 @@ SceneRoots:
   - {fileID: 1977421028}
   - {fileID: 1474665775}
   - {fileID: 2006127472}
+  - {fileID: 1148621280}
