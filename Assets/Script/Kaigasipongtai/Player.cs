@@ -36,7 +36,8 @@ public class Player : MonoBehaviour
         transform.localScale = scale;
         facingLeft = !facingLeft;
     }
-
+    public float hideDelay = 0.6f;
+    public float hideTimer = 0f;
     void ProccessInput()
     {
         float moveX = Input.GetAxis("Horizontal");
@@ -51,6 +52,18 @@ public class Player : MonoBehaviour
         input.y = Input.GetAxis("Vertical");
 
         input = input.normalized;
+        if (Input.GetMouseButton(1))
+        {
+            preparedHook();
+            Debug.Log("okay");
+            hideTimer = hideDelay;
+        }
+        else
+        {
+            hideTimer -= Time.deltaTime;
+            if (hideTimer <= 0f)
+                ArrowIndicator.SetActive(false);
+        }
     }
 
     void Animate()
@@ -64,12 +77,13 @@ public class Player : MonoBehaviour
 
     public void preparedHook()
     {
-        
+        ArrowIndicator.SetActive(true);
+
     }
 
     public void ShootHook()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -82,7 +96,7 @@ public class Player : MonoBehaviour
         {
             Flip();
         }
-        
-        
+
+
     }
 }
