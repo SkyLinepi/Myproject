@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            _animator.SetBool("ImmaShoot", false);
             hideTimer -= Time.deltaTime;
             if (hideTimer <= 0f)
                 ArrowIndicator.SetActive(false);
@@ -78,12 +79,12 @@ public class Player : MonoBehaviour
     public void preparedHook()
     {
         ArrowIndicator.SetActive(true);
-
+        _animator.SetBool("ImmaShoot", true);
     }
 
     public void ShootHook()
     {
-
+        _animator.SetBool("ImmaShoot", false);
     }
 
     // Update is called once per frame
