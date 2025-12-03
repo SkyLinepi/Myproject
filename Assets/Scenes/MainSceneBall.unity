@@ -4723,6 +4723,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   PullStrength: 0
   FIshNaja: {fileID: 0}
   patienceDrainRate: 1
@@ -5955,6 +5958,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
   tooltipManager: {fileID: 655701432}
+--- !u!1 &1716114343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1716114344}
+  m_Layer: 0
+  m_Name: shootpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1716114344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716114343}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.334, y: 0.391, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1977421028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751751077
 GameObject:
   m_ObjectHideFlags: 0
@@ -6782,7 +6816,8 @@ Transform:
   m_LocalPosition: {x: -7.62, y: -17.36, z: 0}
   m_LocalScale: {x: 3.972206, y: 3.972206, z: 3.972206}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1716114344}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1977421030
@@ -6828,8 +6863,13 @@ MonoBehaviour:
   _animator: {fileID: 1977421026}
   rb2D: {fileID: 1977421030}
   force: 10
+  ChargeUpMoveSpeed: 5
+  collected: 10
   MousePosition: {x: 0, y: 0, z: 0}
   ArrowIndicator: {fileID: 1047772178}
+  Harpoon: {fileID: 5313684955177307537, guid: 60a40c49bcf19b243b329af35185e74e, type: 3}
+  harpoonSpeed: 10
+  shootPoint: {fileID: 1716114344}
   hideDelay: 0.6
   hideTimer: 0.4
 --- !u!114 &1977421032

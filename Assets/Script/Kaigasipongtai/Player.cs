@@ -5,14 +5,20 @@ public class Player : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Animator _animator;
     public Rigidbody2D rb2D;
-    public float force = 1f;
+    public float force = 10f;
+    public float ChargeUpMoveSpeed = 5f;
+    public float collected = 10f;
     private Vector2 input;
     private Vector2 lastMoveDirection;
     private bool facingLeft = true;
     public Vector3 MousePosition;
     public GameObject ArrowIndicator;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject Harpoon;
+    public float harpoonSpeed = 10f;
+    public Transform shootPoint;
+    public float reloadTime = 5f;
+    private float reloadTimer;
+    private bool isReloading = false;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -57,9 +63,14 @@ public class Player : MonoBehaviour
             preparedHook();
             Debug.Log("okay");
             hideTimer = hideDelay;
+            if (Input.GetMouseButtonDown(0) && !isReloading)
+            {
+                ShootHook();
+            }
         }
         else
         {
+            force = collected;
             _animator.SetBool("ImmaShoot", false);
             hideTimer -= Time.deltaTime;
             if (hideTimer <= 0f)
@@ -78,21 +89,42 @@ public class Player : MonoBehaviour
 
     public void preparedHook()
     {
+        force = ChargeUpMoveSpeed;
         ArrowIndicator.SetActive(true);
         _animator.SetBool("ImmaShoot", true);
     }
 
     public void ShootHook()
     {
+        force = collected;
         _animator.SetBool("ImmaShoot", false);
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorld.z = 0f;
+        Vector3 dir = (mouseWorld - shootPoint.position).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        GameObject harpoon = Instantiate(Harpoon, shootPoint.position, Quaternion.Euler(0, 0, angle));
+        Rigidbody2D rb = harpoon.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = dir * harpoonSpeed;
     }
 
-    // Update is called once per frame
+    void relaod()
+    {
+        if (isReloading)
+        {
+            reloadTimer -= Time.deltaTime;
+
+            if (reloadTimer <= 0f)
+            {
+                isReloading = false;
+            }
+        }
+    }
     void FixedUpdate()
     {
         Move();
         ProccessInput();
         Animate();
+        relaod();
         if (input.x < 0 && !facingLeft || input.x > 0 && facingLeft)
         {
             Flip();
