@@ -49,24 +49,21 @@ public class Player : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
 
+        // store last move
         if ((moveX == 0 && moveY == 0) && (input.x != 0 || input.y != 0))
-        {
             lastMoveDirection = input;
-        }
 
-        input.x = Input.GetAxis("Horizontal");
-        input.y = Input.GetAxis("Vertical");
+        input = new Vector2(moveX, moveY).normalized;
 
-        input = input.normalized;
+        // Hold right-click to charge
         if (Input.GetMouseButton(1))
         {
             preparedHook();
-            Debug.Log("okay");
             hideTimer = hideDelay;
-            if (Input.GetMouseButtonDown(0) && !isReloading)
-            {
+
+            // Fire once on LMB click
+            if (Input.GetMouseButtonDown(0))
                 ShootHook();
-            }
         }
         else
         {
@@ -77,6 +74,7 @@ public class Player : MonoBehaviour
                 ArrowIndicator.SetActive(false);
         }
     }
+
 
     void Animate()
     {
@@ -96,35 +94,45 @@ public class Player : MonoBehaviour
 
     public void ShootHook()
     {
+        if (isReloading) return;     // prevent shooting while reloading
+
         force = collected;
         _animator.SetBool("ImmaShoot", false);
+
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorld.z = 0f;
+
         Vector3 dir = (mouseWorld - shootPoint.position).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
         GameObject harpoon = Instantiate(Harpoon, shootPoint.position, Quaternion.Euler(0, 0, angle));
         Rigidbody2D rb = harpoon.GetComponent<Rigidbody2D>();
         rb.linearVelocity = dir * harpoonSpeed;
+
+        StartReload();
     }
 
-    void relaod()
+    void StartReload()
     {
-        if (isReloading)
-        {
-            reloadTimer -= Time.deltaTime;
-
-            if (reloadTimer <= 0f)
-            {
-                isReloading = false;
-            }
-        }
+        isReloading = true;
+        reloadTimer = reloadTime;
     }
+
+    void UpdateReload()
+    {
+        if (!isReloading) return;
+
+        reloadTimer -= Time.deltaTime;
+        if (reloadTimer <= 0f)
+            isReloading = false;
+    }
+
     void FixedUpdate()
     {
         Move();
         ProccessInput();
         Animate();
-        relaod();
+        UpdateReload();
         if (input.x < 0 && !facingLeft || input.x > 0 && facingLeft)
         {
             Flip();
