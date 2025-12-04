@@ -6867,9 +6867,10 @@ MonoBehaviour:
   collected: 10
   MousePosition: {x: 0, y: 0, z: 0}
   ArrowIndicator: {fileID: 1047772178}
-  Harpoon: {fileID: 5313684955177307537, guid: 60a40c49bcf19b243b329af35185e74e, type: 3}
-  harpoonSpeed: 10
+  Harpoon: {fileID: 7022452462736512056, guid: ca79042b7d59925428a5d681c63fda31, type: 3}
+  harpoonSpeed: 40
   shootPoint: {fileID: 1716114344}
+  reloadTime: 5
   hideDelay: 0.6
   hideTimer: 0.4
 --- !u!114 &1977421032
