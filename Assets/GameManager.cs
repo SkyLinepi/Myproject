@@ -3,9 +3,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public fish fishdata;
+    public int Money;
     public bool fishIsCaught;
     private float shuffleTimer;
     public GameObject[] directions;
+    public fish[] fishBackpack;
     public float PullStrength;
     public GameObject FIshNaja;
 

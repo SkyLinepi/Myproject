@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public float reloadTime = 5f;
     private float reloadTimer;
     private bool isReloading = false;
+    public float oxygen;
     void Start()
     {
         _animator = GetComponent<Animator>();
