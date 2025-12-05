@@ -6872,8 +6872,8 @@ MonoBehaviour:
   Harpoon: {fileID: 7022452462736512056, guid: ca79042b7d59925428a5d681c63fda31, type: 3}
   harpoonSpeed: 40
   shootPoint: {fileID: 1716114344}
-  reloadTime: 5
-  oxygen: 0
+  reloadTime: 10
+  oxygen: 100
   hideDelay: 0.6
   hideTimer: 0.4
 --- !u!114 &1977421032
