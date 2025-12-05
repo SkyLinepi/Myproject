@@ -3798,7 +3798,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 12695e6e08ef70043a104e10dd2fc159, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3819,9 +3819,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.29411766, g: 0.80392164, b: 0.9960785, a: 1}
+  m_Color: {r: 0.18039216, g: 0.7411765, b: 0.9960785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3840,8 +3840,8 @@ Transform:
   m_GameObject: {fileID: 779019988}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.2299, y: -140.9051, z: 0}
-  m_LocalScale: {x: 167.37762, y: 194.12943, z: 1}
+  m_LocalPosition: {x: -28.2299, y: -406.496, z: 0}
+  m_LocalScale: {x: 167.37762, y: 725.3229, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4306,7 +4306,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 12695e6e08ef70043a104e10dd2fc159, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4348,8 +4348,8 @@ Transform:
   m_GameObject: {fileID: 1054442388}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5553, y: -126.3037, z: 0}
-  m_LocalScale: {x: 269.99338, y: 192.35147, z: 0.16561}
+  m_LocalPosition: {x: -50.1358, y: -126.3037, z: 0}
+  m_LocalScale: {x: 176.84566, y: 192.35147, z: 0.16561}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4716,6 +4716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   fishdata: {fileID: 0}
+  Money: 0
   fishIsCaught: 0
   directions:
   - {fileID: 0}
@@ -4726,6 +4727,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  fishBackpack: []
   PullStrength: 0
   FIshNaja: {fileID: 0}
   patienceDrainRate: 1
@@ -6536,8 +6538,8 @@ Transform:
   m_GameObject: {fileID: 1826938423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.9189, y: -204.3, z: 0}
-  m_LocalScale: {x: 1.4875422, y: 3.4040647, z: 1}
+  m_LocalPosition: {x: -28.7, y: -394.313, z: 0}
+  m_LocalScale: {x: 1.4875422, y: 6.8728065, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6871,6 +6873,7 @@ MonoBehaviour:
   harpoonSpeed: 40
   shootPoint: {fileID: 1716114344}
   reloadTime: 5
+  oxygen: 0
   hideDelay: 0.6
   hideTimer: 0.4
 --- !u!114 &1977421032
