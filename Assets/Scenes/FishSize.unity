@@ -185,6 +185,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7787547185740387072, guid: 16aa11571250c5944ae4bac37906850b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787547185740387072, guid: 16aa11571250c5944ae4bac37906850b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787547185740387072, guid: 16aa11571250c5944ae4bac37906850b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787547185740387072, guid: 16aa11571250c5944ae4bac37906850b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.69
       objectReference: {fileID: 0}
@@ -246,12 +258,24 @@ PrefabInstance:
       value: SeaHorse_1
       objectReference: {fileID: 0}
     - target: {fileID: 7153261794874304807, guid: ada43b524afa07d4595f51ca3e23a67f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153261794874304807, guid: ada43b524afa07d4595f51ca3e23a67f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153261794874304807, guid: ada43b524afa07d4595f51ca3e23a67f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153261794874304807, guid: ada43b524afa07d4595f51ca3e23a67f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.843643
+      value: 32.93
       objectReference: {fileID: 0}
     - target: {fileID: 7153261794874304807, guid: ada43b524afa07d4595f51ca3e23a67f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.277392
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 7153261794874304807, guid: ada43b524afa07d4595f51ca3e23a67f, type: 3}
       propertyPath: m_LocalPosition.z
