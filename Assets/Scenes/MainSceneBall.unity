@@ -5181,7 +5181,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  PullStrength: 10
+  PullStrength: 1
   FIshNaja: {fileID: 1934086144}
   fishPatience: 0
   patienceDrainRate: 1
