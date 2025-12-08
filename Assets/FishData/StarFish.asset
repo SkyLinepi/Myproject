@@ -15,7 +15,6 @@ MonoBehaviour:
   name: StarFish
   fishPic: {fileID: -9191757620724395984, guid: efa40fb9b182312409159e75b518310c, type: 3}
   maxFishPatience: 4.46
-  fishPatienceDrainRates: 1
   ChoasProb: 7
   ShortestShuffle: 1.6
   LongestShuffle: 3

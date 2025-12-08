@@ -15,7 +15,6 @@ MonoBehaviour:
   name: LameAssFish
   fishPic: {fileID: -4568749566812120781, guid: f1241daab2f69a04dae86d673ab116ee, type: 3}
   maxFishPatience: 7.41
-  fishPatienceDrainRates: 1
   ChoasProb: 7
   ShortestShuffle: 1.6
   LongestShuffle: 3
