@@ -15,6 +15,7 @@ MonoBehaviour:
   name: seaHorse
   fishPic: {fileID: 8379032209118744290, guid: b7aa8ac801f99e04a830a0858fcf7d9b, type: 3}
   maxFishPatience: 15
+  fishPatienceDrainRates: 1
   ChoasProb: 7
   ShortestShuffle: 1.6
   LongestShuffle: 3

@@ -15,6 +15,7 @@ MonoBehaviour:
   name: angler
   fishPic: {fileID: -2985943229912152860, guid: e16c2c147adc1ff4a898ad93836889f4, type: 3}
   maxFishPatience: 8
+  fishPatienceDrainRates: 1
   ChoasProb: 4
   ShortestShuffle: 0.5
   LongestShuffle: 2

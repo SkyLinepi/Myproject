@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Nemo
   fishPic: {fileID: 1885935574615274736, guid: 3f7bcb6eb31748b4daba7c242f7a2101, type: 3}
   maxFishPatience: 9.9
+  fishPatienceDrainRates: 1
   ChoasProb: 7
   ShortestShuffle: 1.6
   LongestShuffle: 3

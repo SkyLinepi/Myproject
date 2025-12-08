@@ -15,6 +15,7 @@ MonoBehaviour:
   name: JellyiyFish
   fishPic: {fileID: -5049841242315071939, guid: c44e417819832e3438800d1df087d1e3, type: 3}
   maxFishPatience: 11.04
+  fishPatienceDrainRates: 1
   ChoasProb: 7
   ShortestShuffle: 1.6
   LongestShuffle: 3

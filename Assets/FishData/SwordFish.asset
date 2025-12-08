@@ -15,6 +15,7 @@ MonoBehaviour:
   name: SwordFish
   fishPic: {fileID: -7379534829552286789, guid: efe0c939b3e6d1e4b9cabd922662b566, type: 3}
   maxFishPatience: 27.2
+  fishPatienceDrainRates: 1
   ChoasProb: 7
   ShortestShuffle: 1.6
   LongestShuffle: 3
