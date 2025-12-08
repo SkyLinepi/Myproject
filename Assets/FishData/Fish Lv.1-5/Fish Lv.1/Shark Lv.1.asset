@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Shark Lv.1
   fishPic: {fileID: -7157024494132205858, guid: 6cc6dfea0a3930143bb9b916765a5b32, type: 3}
-  maxFishPatience: 0
-  fishPatienceDrainRates: 0
-  ChoasProb: 0
-  ShortestShuffle: 0
-  LongestShuffle: 0
-  AttemptBeforeCD: 0
-  CooldowbDuration: 0
-  Sellprice: 0
+  maxFishPatience: 15
+  fishPatienceDrainRates: 6
+  ChoasProb: 4
+  ShortestShuffle: 1
+  LongestShuffle: 2
+  AttemptBeforeCD: 5
+  CooldowbDuration: 1
+  Sellprice: 250
