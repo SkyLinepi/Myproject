@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: JellyFish Lv.3
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: JellyFish Lv.3
-  fishPic: {fileID: -6470460504253458178, guid: 79d4a9c5388d58d46a22258ac71098c2, type: 3}
+  fishPic: {fileID: 8299010534019008337, guid: d362719ce19695a46b668331628b2baf, type: 3}
   maxFishPatience: 0
+  fishPatienceDrainRates: 0
   ChoasProb: 0
   ShortestShuffle: 0
   LongestShuffle: 0

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Nemo Lv.1
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Nemo Lv.1
-  fishPic: {fileID: -855298285791758126, guid: e6d25e3a7ba447147a18215c8a2e51c0, type: 3}
+  fishPic: {fileID: 5219559022885451000, guid: e79bcbc621be68342baf057a0b6be50c, type: 3}
   maxFishPatience: 0
+  fishPatienceDrainRates: 0
   ChoasProb: 0
   ShortestShuffle: 0
   LongestShuffle: 0

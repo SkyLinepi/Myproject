@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Saw Lv.2
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Saw Lv.2
-  fishPic: {fileID: 6937817954938267909, guid: 2848b72e21837c248bcc6be86c6145c2, type: 3}
+  fishPic: {fileID: 4538383370022818487, guid: 5834f2daaeb5371438d8ca7fd6d4a6d6, type: 3}
   maxFishPatience: 0
+  fishPatienceDrainRates: 0
   ChoasProb: 0
   ShortestShuffle: 0
   LongestShuffle: 0

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Blop Lv.2
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Blop Lv.2
-  fishPic: {fileID: 6937817954938267909, guid: 818b76c54cf831d4bbd928fa66d8b018, type: 3}
+  fishPic: {fileID: -7702343859351551311, guid: 9ac1275b4a156ad49b8eaeda721e436d, type: 3}
   maxFishPatience: 0
+  fishPatienceDrainRates: 0
   ChoasProb: 0
   ShortestShuffle: 0
   LongestShuffle: 0

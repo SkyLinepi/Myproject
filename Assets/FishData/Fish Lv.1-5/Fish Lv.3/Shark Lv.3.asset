@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Shark Lv.3
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Shark Lv.3
-  fishPic: {fileID: -6470460504253458178, guid: 276ed3d8e47d11b4ca13124e36db8548, type: 3}
+  fishPic: {fileID: 1114801132208079694, guid: f270951a164f87b4497f81498f107d18, type: 3}
   maxFishPatience: 0
+  fishPatienceDrainRates: 0
   ChoasProb: 0
   ShortestShuffle: 0
   LongestShuffle: 0

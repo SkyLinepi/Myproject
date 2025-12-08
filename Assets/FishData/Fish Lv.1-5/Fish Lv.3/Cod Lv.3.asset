@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Cod Lv.3
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Cod Lv.3
-  fishPic: {fileID: -6470460504253458178, guid: 4d90e00d2bbe0fe45a9174bb26e409d3, type: 3}
+  fishPic: {fileID: -945564986886134321, guid: 8ddb8996ba19e0f4cb866a52e1b468db, type: 3}
   maxFishPatience: 0
+  fishPatienceDrainRates: 0
   ChoasProb: 0
   ShortestShuffle: 0
   LongestShuffle: 0

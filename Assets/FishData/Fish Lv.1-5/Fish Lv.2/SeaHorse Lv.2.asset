@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: SeaHorse Lv.2
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: SeaHorse Lv.2
-  fishPic: {fileID: 6937817954938267909, guid: 91782ae491239894095277ac962bfb79, type: 3}
+  fishPic: {fileID: -2924639834018999399, guid: 636168a8dde724841962d506b9e77495, type: 3}
   maxFishPatience: 0
+  fishPatienceDrainRates: 0
   ChoasProb: 0
   ShortestShuffle: 0
   LongestShuffle: 0

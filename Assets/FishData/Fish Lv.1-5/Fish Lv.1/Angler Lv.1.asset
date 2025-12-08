@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Angler Lv.1
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Angler Lv.1
-  fishPic: {fileID: -855298285791758126, guid: efc64ac3c7d76ec4f9e6ad580e21a4e6, type: 3}
+  fishPic: {fileID: -2098001991344985323, guid: eb4283133d6ae7e43a0ed4f7c57f3982, type: 3}
   maxFishPatience: 0
+  fishPatienceDrainRates: 0
   ChoasProb: 0
   ShortestShuffle: 0
   LongestShuffle: 0
