@@ -14,11 +14,17 @@ public class GameManager : MonoBehaviour
     static public bool miniGameActive = false;
     static public GameObject direct;
     private float MaxFishPatience;
-    static public float fishPatience;
+    public float fishPatience;
     public float patienceDrainRate = 1f;
+    public GameObject currentPlayerDirection;
+    public Transform pullTarget;
+    public Player player;
+    public Color normalColor = Color.white;
+    public Color highlightColor = Color.yellow;
 
     public void TriggerMiniGame(fish fishCaught)
     {
+        player.enabled = false;
         fishdata = fishCaught;
         MaxFishPatience = fishdata.maxFishPatience;
         fishPatience = MaxFishPatience;
@@ -27,7 +33,7 @@ public class GameManager : MonoBehaviour
         sr.sprite = fishdata.fishPic;
         fishIsCaught = false;
         miniGameActive = true;
-        
+
 
         SetShuffleTime();
         FishPullDirection();
@@ -35,8 +41,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(STaticBS.GameStarted);
+        UpdatePlayerDirection();
         if (!miniGameActive || fishIsCaught) return;
+        PlayerPulling(currentPlayerDirection);
         shuffleTimer -= Time.deltaTime;
 
         if (shuffleTimer <= 0f)
@@ -48,9 +55,40 @@ public class GameManager : MonoBehaviour
 
     void FishPullDirection()
     {
-        GameObject chosenDirection = directions[Random.Range(0, directions.Length)];
-        Debug.Log("Direction: " + chosenDirection.name);
+        // Pick new direction
+        direct = directions[Random.Range(0, directions.Length)];
+
+        // Change color of all direction objects
+        for (int i = 0; i < directions.Length; i++)
+        {
+            SpriteRenderer sr = directions[i].GetComponent<SpriteRenderer>();
+
+            if (directions[i] == direct)
+                sr.color = highlightColor;     // highlighted arrow
+            else
+                sr.color = normalColor;        // reset others
+        }
+
+        Debug.Log("Direction: " + direct.name);
     }
+    public void PlayerPulling(GameObject playerInputDirection)
+    {
+        if (playerInputDirection == direct && Input.GetMouseButtonDown(0))
+        {
+            MoveFishTowardsPlayer();
+            fishPatience += PullStrength; // recover patience while pulling
+            fishPatience = Mathf.Clamp(fishPatience, 0, MaxFishPatience * 2f);
+            if (fishPatience >= MaxFishPatience * 2)
+                CatchFish();
+        }
+        else
+        {
+            fishPatience -= patienceDrainRate * Time.deltaTime;
+            if (fishPatience <= 0)
+                fckyouiamOut();
+        }
+    }
+
 
     void SetShuffleTime()
     {
@@ -60,7 +98,7 @@ public class GameManager : MonoBehaviour
     void BurningTime()
     {
         fishPatience -= patienceDrainRate * Time.deltaTime;
-        if(fishPatience == 0)
+        if (fishPatience == 0)
         {
             fckyouiamOut();
         }
@@ -68,6 +106,115 @@ public class GameManager : MonoBehaviour
 
     void fckyouiamOut()
     {
-        
+        miniGameActive = false;
+        fishIsCaught = false;
+        fishPatience = 0f;
+        FIshNaja.SetActive(false);
+        direct = null;
+        player.enabled = true;
+        Debug.Log("its escape");
     }
+
+    public void UpdatePlayerDirection()
+    {
+        bool up = Input.GetKey(KeyCode.W);
+        bool down = Input.GetKey(KeyCode.S);
+        bool left = Input.GetKey(KeyCode.A);
+        bool right = Input.GetKey(KeyCode.D);
+
+        int keyCount = 0;
+        if (up) keyCount++;
+        if (down) keyCount++;
+        if (left) keyCount++;
+        if (right) keyCount++;
+
+        // ❌ More than 2 keys pressed → INVALID
+        // (2 keys allowed for diagonals only)
+        if (keyCount > 2)
+        {
+            currentPlayerDirection = null;
+            return;
+        }
+
+        // ❌ Opposites pressed → INVALID
+        if (up && down || left && right)
+        {
+            currentPlayerDirection = null;
+            return;
+        }
+
+        // ➕ 8-direction mapping
+        if (up && right) { currentPlayerDirection = directions[0]; return; }
+        if (up && left) { currentPlayerDirection = directions[1]; return; }
+        if (down && right) { currentPlayerDirection = directions[2]; return; }
+        if (down && left) { currentPlayerDirection = directions[3]; return; }
+
+        if (up) { currentPlayerDirection = directions[4]; return; }
+        if (down) { currentPlayerDirection = directions[5]; return; }
+        if (left) { currentPlayerDirection = directions[6]; return; }
+        if (right) { currentPlayerDirection = directions[7]; return; }
+
+        // No input
+        currentPlayerDirection = null;
+    }
+
+    void MoveFishTowardsPlayer()
+    {
+        Vector3 fishPos = FIshNaja.transform.position;
+        Vector3 targetPos = pullTarget.position;
+
+        float dist = Vector3.Distance(fishPos, targetPos);
+
+        // Scale speed based on distance:
+        // Far = faster • Close = slower
+        float scaledSpeed = PullStrength * (dist * 0.4f);
+
+        // Prevent too slow or too fast
+        scaledSpeed = Mathf.Clamp(scaledSpeed, 2f, PullStrength * 2f);
+
+        FIshNaja.transform.position =
+            Vector3.MoveTowards(fishPos, targetPos, scaledSpeed * Time.deltaTime);
+    }
+
+    void CatchFish()
+    {
+        Debug.Log("We got him!");
+
+        // Stop minigame
+        miniGameActive = false;
+        fishIsCaught = true;
+
+        // Add fish to backpack
+        AddFishToBackpack(fishdata);
+
+        // Hide fish sprite
+        FIshNaja.SetActive(false);
+
+        // Reset patience & direction
+        fishPatience = 0f;
+        direct = null;
+
+        // Re-enable player movement
+        player.enabled = true;
+
+        // Optional: Give money reward
+        // Money += fishdata.price;
+    }
+    void AddFishToBackpack(fish caughtFish)
+    {
+        for (int i = 0; i < fishBackpack.Length; i++)
+        {
+            if (fishBackpack[i] == null)
+            {
+                fishBackpack[i] = caughtFish;
+                Debug.Log("Fish added to backpack: " );
+                return; // stop after inserting
+            }
+        }
+
+        Debug.Log("Backpack FULL. Could not add fish.");
+    }
+
+
+
 }

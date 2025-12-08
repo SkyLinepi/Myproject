@@ -23,6 +23,7 @@ public class Despawner : MonoBehaviour
             FishMovement fm = cd.GetComponent<FishMovement>();
             fish fishdata = fm.FishIdentity;
             GM.TriggerMiniGame(fishdata);
+            GM.FIshNaja.transform.position = transform.position;
         }
     }
 }

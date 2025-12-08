@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: pufferFish
   fishPic: {fileID: 21300000, guid: d9b390233daa78a4d83a22a86dba88b7, type: 3}
-  maxFishPatience: 16.06
+  maxFishPatience: 20
   ChoasProb: 1.5
   ShortestShuffle: 1.4
   LongestShuffle: 2
