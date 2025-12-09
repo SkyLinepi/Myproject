@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb641b02803b2f64eb9ecce70df534c4, type: 3}
+  m_Name: Blop Lv.4
+  m_EditorClassIdentifier: Assembly-CSharp::fish
+  name: Blop Lv.4
+  fishPic: {fileID: -3144956980385219222, guid: 679eec1f1ec71f645b108a571303ad9b, type: 3}
+  maxFishPatience: 45
+  fishPatienceDrainRates: 11
+  ChoasProb: 1
+  ShortestShuffle: 1.5
+  LongestShuffle: 3.5
+  AttemptBeforeCD: 5
+  CooldowbDuration: 1
+  Sellprice: 450

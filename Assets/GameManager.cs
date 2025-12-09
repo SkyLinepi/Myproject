@@ -15,15 +15,12 @@ public class GameManager : MonoBehaviour
     static public GameObject direct;
     private float MaxFishPatience;
     public float fishPatience;
-    public float patienceDrainRate = 1f;
+    public float patienceDrainRate;
     public GameObject currentPlayerDirection;
     public Transform pullTarget;
     public Player player;
     public Color normalColor = Color.white;
     public Color highlightColor = Color.yellow;
-
-    
-
     public void TriggerMiniGame(fish fishCaught)
     {
         player.enabled = false;
@@ -35,6 +32,7 @@ public class GameManager : MonoBehaviour
         sr.sprite = fishdata.fishPic;
         fishIsCaught = false;
         miniGameActive = true;
+        patienceDrainRate = fishdata.fishPatienceDrainRates;
 
 
         SetShuffleTime();

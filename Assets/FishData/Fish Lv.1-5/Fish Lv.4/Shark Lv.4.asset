@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb641b02803b2f64eb9ecce70df534c4, type: 3}
+  m_Name: Shark Lv.4
+  m_EditorClassIdentifier: Assembly-CSharp::fish
+  name: Shark Lv.4
+  fishPic: {fileID: 47822432898164558, guid: 884df0ac59c649442835d413a1ec4b46, type: 3}
+  maxFishPatience: 55
+  fishPatienceDrainRates: 21
+  ChoasProb: 4
+  ShortestShuffle: 0.35
+  LongestShuffle: 0.8
+  AttemptBeforeCD: 5
+  CooldowbDuration: 1
+  Sellprice: 750

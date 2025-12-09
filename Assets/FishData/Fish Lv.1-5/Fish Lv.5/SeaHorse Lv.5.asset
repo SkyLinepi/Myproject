@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb641b02803b2f64eb9ecce70df534c4, type: 3}
+  m_Name: SeaHorse Lv.5
+  m_EditorClassIdentifier: Assembly-CSharp::fish
+  name: SeaHorse Lv.5
+  fishPic: {fileID: -1966465564891268260, guid: e8a5835df2fd6604aa714c661ac94dd8, type: 3}
+  maxFishPatience: 35
+  fishPatienceDrainRates: 18
+  ChoasProb: 4
+  ShortestShuffle: 0.4
+  LongestShuffle: 1.7
+  AttemptBeforeCD: 5
+  CooldowbDuration: 1
+  Sellprice: 720
