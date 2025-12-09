@@ -7,6 +7,6 @@ public class priceYolo2 : MonoBehaviour
     public Text priceText;
     void FixedUpdate()
     {
-        priceText.text = Shop.calculatePriceLine.ToString();
+        priceText.text = Shop.calculatePriceReloadTime.ToString();
     }
 }

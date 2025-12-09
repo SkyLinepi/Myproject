@@ -5,9 +5,9 @@ public class Player : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Animator _animator;
     public Rigidbody2D rb2D;
-    public float force = 10f;
+    public float force;
     public float ChargeUpMoveSpeed = 5f;
-    public float collected = 10f;
+    public float collected;
     private Vector2 input;
     private Vector2 lastMoveDirection;
     private bool facingLeft = true;
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public GameObject Harpoon;
     public float harpoonSpeed = 10f;
     public Transform shootPoint;
-    public float reloadTime = 5f;
+    public float reloadTime;
     private float reloadTimer;
     private bool isReloading = false;
     public float oxygen;

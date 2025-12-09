@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     public Color normalColor = Color.white;
     public Color highlightColor = Color.yellow;
 
+    
+
     public void TriggerMiniGame(fish fishCaught)
     {
         player.enabled = false;

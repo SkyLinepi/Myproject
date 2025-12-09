@@ -5,9 +5,14 @@ using UnityEngine.EventSystems;
 public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject DIVE;
-    
-    
     public GameObject OnOfShopAndPlayButton; // ใส่ OnOf ใน Inspector
+
+    public GameObject OnofShowmoney;
+
+    void Start()
+    {
+        
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -17,6 +22,7 @@ public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointer
     // When mouse leaves the button
     public void OnPointerExit(PointerEventData eventData)
     {
+        //ซ่อนปุ่ม DIVE
         DIVE.SetActive(false);
     }
 
@@ -30,4 +36,14 @@ public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointer
             OnOfShopAndPlayButton.SetActive(false);
         }
     }
+
+    public void Showmoney()
+{
+    if (OnofShowmoney != null)
+    {
+        bool currentActiveState =OnofShowmoney.activeSelf;
+        OnofShowmoney.SetActive(!currentActiveState); 
+    }
+}
+
 }

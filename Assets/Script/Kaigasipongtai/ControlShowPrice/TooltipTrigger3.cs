@@ -14,7 +14,7 @@ public class TooltipTrigger3 : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerEnter(PointerEventData eventData)
     {
         // สั่งให้ Tooltip Manager แสดง Tooltip พร้อมส่งข้อมูลราคา
-        tooltipManager.ShowTooltip3(Shop.calculatePriceSpeed.ToString());
+        tooltipManager.ShowTooltip3(Shop.calculatePriceForce.ToString());
     }
 
     // ฟังก์ชันนี้จะถูกเรียกทันทีเมื่อเมาส์ออกจากขอบเขตของวัตถุ
