@@ -9,9 +9,11 @@ public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public GameObject OnofShowmoney;
 
+    public GameObject OnofSellButton;
+
     void Start()
     {
-        
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -29,21 +31,24 @@ public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointer
     public void setBool()
     {
         STaticBS.GameStarted = true;
-        
+
         // ซ่อนปุ่ม OnOfShopAndPlayButton เมื่อกดปุ่มนี้
         if (OnOfShopAndPlayButton != null)
         {
             OnOfShopAndPlayButton.SetActive(false);
         }
+
+        if (OnofSellButton != null)
+        {
+            OnofSellButton.SetActive(false);
+        }
+
+        if(OnofShowmoney != null)
+        {
+            OnofShowmoney.SetActive(false);
+        }
     }
 
-    public void Showmoney()
-{
-    if (OnofShowmoney != null)
-    {
-        bool currentActiveState =OnofShowmoney.activeSelf;
-        OnofShowmoney.SetActive(!currentActiveState); 
-    }
-}
+    
 
 }

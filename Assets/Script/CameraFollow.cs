@@ -9,10 +9,14 @@ public class CameraFollow : MonoBehaviour
     
     [Header ("ตัวเเปรเปิดปิดหลังจาก กด Reset เเล้ว")]  
     public GameObject Onof; // ตัวเเปรเปิดปิดปุ่มหลังจาก Reset 
+    public GameObject OnofSellButton;
+    public GameObject OnofCoin;
 
     public Image ProgressHold_P_BarFill;
 
     public GameObject HoldResetUIContainer;
+
+    
 
     
     private float P_holdStartTime = 0f; // ตัวแปรเก็บเวลาที่เริ่มกดปุ่ม P
@@ -117,9 +121,11 @@ public class CameraFollow : MonoBehaviour
         transform.position = StartPosition.position; // ย้ายกล้อง
         
         //  เปิด UI หลักกลับคืนมา
-        if (Onof != null) 
+        if (Onof && OnofCoin && OnofSellButton != null) 
         {
              Onof.SetActive(true); 
+             OnofCoin.SetActive(true);
+             OnofSellButton.SetActive(true);
         }
 
         //  ซ่อนหลอดรีเซ็ต

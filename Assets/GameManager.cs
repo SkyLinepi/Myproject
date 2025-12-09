@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public float PullStrength;
     public GameObject FIshNaja;
 
+    public AudioClip AudioBackgurad;
+
     static public bool miniGameActive = false;
     static public GameObject direct;
     private float MaxFishPatience;
