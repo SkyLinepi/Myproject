@@ -141,4 +141,9 @@ public class Player : MonoBehaviour
 
 
     }
+    void OnDisable()
+    {
+        if (rb2D != null)
+            rb2D.linearVelocity = Vector2.zero;
+    }
 }

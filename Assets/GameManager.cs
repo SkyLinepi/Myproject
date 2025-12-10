@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        MoveFish();
         UpdatePlayerDirection();
         if (!miniGameActive || fishIsCaught) return;
         PlayerPulling(currentPlayerDirection);
@@ -77,7 +78,6 @@ public class GameManager : MonoBehaviour
     {
         if (playerInputDirection == direct && Input.GetMouseButtonDown(0))
         {
-            MoveFishTowardsPlayer();
             fishPatience += PullStrength; // recover patience while pulling
             fishPatience = Mathf.Clamp(fishPatience, 0, MaxFishPatience * 2f);
             if (fishPatience >= MaxFishPatience * 2)
@@ -160,23 +160,30 @@ public class GameManager : MonoBehaviour
         currentPlayerDirection = null;
     }
 
-    void MoveFishTowardsPlayer()
+    void MoveFish()
     {
         Vector3 fishPos = FIshNaja.transform.position;
-        Vector3 targetPos = pullTarget.position;
+        Vector3 playerPos = pullTarget.position;
 
-        float dist = Vector3.Distance(fishPos, targetPos);
+        float dist = Vector3.Distance(fishPos, playerPos);
 
-        // Scale speed based on distance:
-        // Far = faster • Close = slower
-        float scaledSpeed = PullStrength * (dist * 0.4f);
+        // Normalize patience → 0 to 1
+        float t = Mathf.InverseLerp(0, MaxFishPatience * 2f, fishPatience);
 
-        // Prevent too slow or too fast
-        scaledSpeed = Mathf.Clamp(scaledSpeed, 2f, PullStrength * 2f);
+        // Distance based on patience
+        float targetDistance = Mathf.Lerp(MaxFishPatience, 0f, t);
 
+        // Direction from fish → player
+        Vector3 dir = (playerPos - fishPos).normalized;
+
+        // Target final position
+        Vector3 targetPos = playerPos - dir * targetDistance;
+
+        // Move the fish smoothly
         FIshNaja.transform.position =
-            Vector3.MoveTowards(fishPos, targetPos, scaledSpeed * Time.deltaTime);
+            Vector3.MoveTowards(fishPos, targetPos, Time.deltaTime * 5f);
     }
+
 
     void CatchFish()
     {
@@ -209,7 +216,7 @@ public class GameManager : MonoBehaviour
             if (fishBackpack[i] == null)
             {
                 fishBackpack[i] = caughtFish;
-                Debug.Log("Fish added to backpack: " );
+                Debug.Log("Fish added to backpack: ");
                 return; // stop after inserting
             }
         }
