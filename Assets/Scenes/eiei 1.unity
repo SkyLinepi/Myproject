@@ -1081,7 +1081,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishingLine
   rodTip: {fileID: 721543314}
   hookRb: {fileID: 576777974}
-  maxLineLength: 20
   minimumLength: 1
 --- !u!120 &576777980
 LineRenderer:
@@ -2755,8 +2754,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b9bc6a34fb04e45b6938fb6ef6d9f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  _spriteRenderer: {fileID: 0}
+  _animator: {fileID: 0}
   rb2D: {fileID: 1325056178}
   force: 2
+  ChargeUpMoveSpeed: 5
+  collected: 0
+  MousePosition: {x: 0, y: 0, z: 0}
+  ArrowIndicator: {fileID: 0}
+  Harpoon: {fileID: 0}
+  harpoonSpeed: 10
+  shootPoint: {fileID: 0}
+  reloadTime: 0
+  oxygen: 0
+  hideDelay: 0.6
+  hideTimer: 0
 --- !u!50 &1325056178
 Rigidbody2D:
   serializedVersion: 5

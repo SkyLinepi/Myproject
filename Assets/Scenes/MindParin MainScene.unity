@@ -4463,6 +4463,7 @@ MonoBehaviour:
   fishBackpack: []
   PullStrength: 0
   FIshNaja: {fileID: 0}
+  _Audio: {fileID: 0}
   fishPatience: 0
   patienceDrainRate: 1
   currentPlayerDirection: {fileID: 0}
@@ -4470,6 +4471,7 @@ MonoBehaviour:
   player: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  ParentDirecn: {fileID: 0}
 --- !u!4 &1164434295
 Transform:
   m_ObjectHideFlags: 0
@@ -4499,6 +4501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de861474b8bfd6143836455cd7b08eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopController
+  gameManager: {fileID: 0}
+  moneyDisplay: {fileID: 0}
+  backpackUIController: {fileID: 0}
   SubMenuContainer: {fileID: 2067291352}
 --- !u!1 &1166448172
 GameObject:
@@ -5300,8 +5305,12 @@ MonoBehaviour:
   StartPosition: {fileID: 2006127472}
   offset: {x: 0, y: 0, z: -10}
   Onof: {fileID: 0}
+  OnofSellButton: {fileID: 0}
+  OnofCoin: {fileID: 0}
   ProgressHold_P_BarFill: {fileID: 0}
   HoldResetUIContainer: {fileID: 0}
+  audioClip: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1474665772
 GameObject:
   m_ObjectHideFlags: 0
@@ -6729,6 +6738,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   DIVE: {fileID: 758799949}
   OnOfShopAndPlayButton: {fileID: 0}
+  OnofShowmoney: {fileID: 0}
+  OnofSellButton: {fileID: 0}
 --- !u!1 &1977421025
 GameObject:
   m_ObjectHideFlags: 0
@@ -7005,6 +7016,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88dcecce8a1c2c141864d819e46e191e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shop
+  _player: {fileID: 0}
+  gameManager: {fileID: 0}
+  _audiosource: {fileID: 0}
+  _audioClip: {fileID: 0}
 --- !u!1 &2006127471
 GameObject:
   m_ObjectHideFlags: 0

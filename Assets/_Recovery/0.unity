@@ -611,6 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   fishdata: {fileID: 11400000, guid: c72425e1700679f4099b10f839a3a0ce, type: 2}
+  Money: 0
   fishIsCaught: 0
   directions:
   - {fileID: 781338216}
@@ -621,6 +622,18 @@ MonoBehaviour:
   - {fileID: 773919247}
   - {fileID: 1302906612}
   - {fileID: 2055181880}
+  fishBackpack: []
+  PullStrength: 0
+  FIshNaja: {fileID: 0}
+  _Audio: {fileID: 0}
+  fishPatience: 0
+  patienceDrainRate: 0
+  currentPlayerDirection: {fileID: 0}
+  pullTarget: {fileID: 0}
+  player: {fileID: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  ParentDirecn: {fileID: 0}
 --- !u!4 &457648196
 Transform:
   m_ObjectHideFlags: 0
@@ -1303,7 +1316,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:

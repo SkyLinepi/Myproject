@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject FIshNaja;
 
     public AudioClip _Audio;
+    public AudioSource _AudioSource;
 
     static public bool miniGameActive = false;
     static public GameObject direct;
@@ -52,7 +53,6 @@ public class GameManager : MonoBehaviour
         if (!miniGameActive || fishIsCaught) return;
         PlayerPulling(currentPlayerDirection);
         shuffleTimer -= Time.deltaTime;
-
         if (shuffleTimer <= 0f)
         {
             FishPullDirection();

@@ -431,9 +431,15 @@ MonoBehaviour:
   fishBackpack: []
   PullStrength: 0
   FIshNaja: {fileID: 0}
+  _Audio: {fileID: 0}
+  fishPatience: 0
   patienceDrainRate: 1
   currentPlayerDirection: {fileID: 0}
   pullTarget: {fileID: 0}
+  player: {fileID: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  ParentDirecn: {fileID: 0}
 --- !u!4 &457648196
 Transform:
   m_ObjectHideFlags: 0

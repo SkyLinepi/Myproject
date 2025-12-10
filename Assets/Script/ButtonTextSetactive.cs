@@ -11,6 +11,11 @@ public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public GameObject OnofSellButton;
 
+    public AudioClip audioClip;
+    public AudioSource audioSource;
+
+    public GameObject OnofButton;
+
     void Start()
     {
 
@@ -30,6 +35,14 @@ public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void setBool()
     {
+        if(audioClip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(audioClip);
+            Debug.Log("เล่นเสียงเเล้วไอสาสสส ทำไมมึงไม่ได้ยินวะ");
+        }
+
+        
+
         STaticBS.GameStarted = true;
 
         // ซ่อนปุ่ม OnOfShopAndPlayButton เมื่อกดปุ่มนี้
@@ -47,6 +60,12 @@ public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointer
         {
             OnofShowmoney.SetActive(false);
         }
+
+        if(OnofButton != null)
+        {
+            OnofButton.SetActive(false);
+        }
+
     }
 
     

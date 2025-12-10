@@ -18,6 +18,8 @@ public class CameraFollow : MonoBehaviour
     public AudioClip audioClip;
     public AudioSource audioSource;
 
+    public GameObject Button;
+
     
 
     
@@ -79,42 +81,49 @@ public class CameraFollow : MonoBehaviour
             }
         }
         
-        // ตรวจสอบทุกเฟรมเมื่อกดปุ่ม 'P' ค้างอยู่
+        
         if (Input.GetKey(KeyCode.P))
         {
-            float heldTime = Time.time - P_holdStartTime; // คำนวณเวลาที่กดค้าง
+            float heldTime = Time.time - P_holdStartTime; 
 
-            // อัปเดตหลอดความคืบหน้า
+            
             if (ProgressHold_P_BarFill != null)
             {
-                float fillAmount = Mathf.Clamp01(heldTime / HoldDuration); // คำนวณ 0.0 ถึง 1.0
+                float fillAmount = Mathf.Clamp01(heldTime / HoldDuration); 
                 ProgressHold_P_BarFill.fillAmount = fillAmount;
                 audioSource.PlayOneShot(audioClip);
             }
 
-            // ตรวจสอบการรีเซ็ตเมื่อครบเวลา
+            
             if (heldTime >= HoldDuration)
             {
-                // รีเซ็ตเกม
+                
                 ResetToStart();
                 
-                // ป้องกันการรีเซ็ตซ้ำโดยกำหนดเวลาเริ่มต้นให้เป็นค่ามาก
+                
                 P_holdStartTime = Time.time + 9999f;
             }
         }
-        
-        //  ตรวจสอบเมื่อปล่อยปุ่ม P หรือเมื่อเกมรีเซ็ตไปแล้ว
-        // โค้ดเดิมของคุณซับซ้อนไป ผมจึงแก้ไขให้ง่ายขึ้น
+             
         if (Input.GetKeyUp(KeyCode.P) && P_holdStartTime > 0f && P_holdStartTime < Time.time + 9999f) 
         {
-            // ซ่อนหลอดและข้อความ(ถ้าปล่อยปุ่มก่อนครบ 3 วินาที)
+            
             if (HoldResetUIContainer != null)
             {
                 HoldResetUIContainer.SetActive(false);
                 
             }
-            // ล้างค่าเวลาที่เริ่มกดค้างไว้
-            P_holdStartTime = 0f; 
+            
+            P_holdStartTime = 0f;
+
+            if(Button != null)
+            {
+                Button.SetActive(false);
+            }
+            else
+            {
+                
+            }
         }
     }
 
@@ -124,7 +133,7 @@ public class CameraFollow : MonoBehaviour
         STaticBS.GameStarted = false; // รีเซ็ตสถานะเกม
         transform.position = StartPosition.position; // ย้ายกล้อง
         
-        //  เปิด UI หลักกลับคืนมา
+        
         if (Onof && OnofCoin && OnofSellButton != null) 
         {
              Onof.SetActive(true); 
@@ -132,11 +141,13 @@ public class CameraFollow : MonoBehaviour
              OnofSellButton.SetActive(true);
         }
 
-        //  ซ่อนหลอดรีเซ็ต
+        
         if (HoldResetUIContainer != null)
         {
             HoldResetUIContainer.SetActive(false);
         }
+
+        
     }
     
     
