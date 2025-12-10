@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public float PullStrength;
     public GameObject FIshNaja;
 
-    public AudioClip AudioBackgurad;
+    public AudioClip _Audio;
 
     static public bool miniGameActive = false;
     static public GameObject direct;
