@@ -24,6 +24,7 @@ public class Despawner : MonoBehaviour
             fish fishdata = fm.FishIdentity;
             GM.TriggerMiniGame(fishdata);
             GM.FIshNaja.transform.position = transform.position;
+            Destroy(cd.gameObject);
         }
     }
 }

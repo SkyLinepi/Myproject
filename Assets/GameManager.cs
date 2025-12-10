@@ -23,8 +23,11 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Color normalColor = Color.white;
     public Color highlightColor = Color.yellow;
+
+    public GameObject ParentDirecn;
     public void TriggerMiniGame(fish fishCaught)
     {
+        ParentDirecn.SetActive(true);
         player.enabled = false;
         fishdata = fishCaught;
         MaxFishPatience = fishdata.maxFishPatience;
@@ -44,6 +47,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         MoveFish();
+        directionToPlayer();
         UpdatePlayerDirection();
         if (!miniGameActive || fishIsCaught) return;
         PlayerPulling(currentPlayerDirection);
@@ -64,14 +68,11 @@ public class GameManager : MonoBehaviour
         // Change color of all direction objects
         for (int i = 0; i < directions.Length; i++)
         {
-            SpriteRenderer sr = directions[i].GetComponent<SpriteRenderer>();
-
             if (directions[i] == direct)
-                sr.color = highlightColor;     // highlighted arrow
+                directions[i].SetActive(true);     // เปิดทิศที่ถูกต้อง
             else
-                sr.color = normalColor;        // reset others
+                directions[i].SetActive(false);    // ปิดทิศอื่นทั้งหมด
         }
-
         Debug.Log("Direction: " + direct.name);
     }
     public void PlayerPulling(GameObject playerInputDirection)
@@ -115,6 +116,7 @@ public class GameManager : MonoBehaviour
         direct = null;
         player.enabled = true;
         Debug.Log("its escape");
+        ParentDirecn.SetActive(false);
     }
 
     public void UpdatePlayerDirection()
@@ -207,7 +209,8 @@ public class GameManager : MonoBehaviour
         player.enabled = true;
 
         // Optional: Give money reward
-        // Money += fishdata.price;
+        // Money += fishdata.price;v
+        ParentDirecn.SetActive(false);
     }
     void AddFishToBackpack(fish caughtFish)
     {
@@ -224,6 +227,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Backpack FULL. Could not add fish.");
     }
 
+    void directionToPlayer()
+    {
+        ParentDirecn.transform.position = FIshNaja.transform.position;
+    }
 
 
 }
