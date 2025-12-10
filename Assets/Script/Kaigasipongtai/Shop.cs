@@ -1,63 +1,121 @@
 using System;
+using System.Linq;
 using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    
-    static public int reloadTimeLevel = 2;
-    static public int StrengthLevel = 2;
-    static public int SpeedLevel = 2;
+
+    static public int reloadTimeLevel = 1;
+    static public int StrengthLevel = 1;
+    static public int SpeedLevel = 1;
 
     static public int calculatePriceReloadTime = 2;
     static public int calculatePriceStrength = 10;
     static public int calculatePriceForce = 4;
 
-    public Player _reload;
-    public Player _force;
-    public GameManager _pullStrenght;
+    public Player _player;
+    public GameManager gameManager;
+    public AudioSource _audiosource;
+    public AudioClip _audioClip;
+    
 
     public void Start()
     {
-
+        
     }
     public void PriceforUpgardeReloadTime()
     {
-        calculatePriceReloadTime += reloadTimeLevel*20;
-        Debug.Log(calculatePriceReloadTime); 
-        reloadTimeLevel++;  
+        if (gameManager.Money >= calculatePriceReloadTime)
+        {
+            calculatePriceReloadTime += reloadTimeLevel * 15;
+        Debug.Log(calculatePriceReloadTime);
+        reloadTimeLevel++;
         Debug.Log(reloadTimeLevel);
+        }
+        else
+        {
+            
+        }
+
     }
     public void PriceforUpgardeStrength()
     {
-        calculatePriceStrength += StrengthLevel*15;
+        if(gameManager.Money >= calculatePriceStrength)
+        {
+            calculatePriceStrength += StrengthLevel * 15;
         Debug.Log(calculatePriceStrength);
         StrengthLevel++;
         Debug.Log(StrengthLevel);
+        }
     }
     public void PriceforUpgradeForce()
     {
-        calculatePriceForce += SpeedLevel * 2;
+        if (gameManager.Money>= calculatePriceForce)
+        {
+            calculatePriceForce += SpeedLevel * 20;
         SpeedLevel++;
         Debug.Log("Level Speed now =  " + SpeedLevel);
+        Debug.Log("next for price upgrade = " + calculatePriceForce);
+        }
     }
 
     public void UpdateReload()
     {
-        _reload.reloadTime -= 0.45f;
-        Debug.Log("Time to reload = " +_reload.reloadTime);
+        if (gameManager.Money >= calculatePriceReloadTime)
+        {
+            if (_player.reloadTime >= 0)
+            {
+                _player.reloadTime -= 0.25f;
+                Debug.Log("Time to reload = " + _player.reloadTime);
+                gameManager.Money -= calculatePriceReloadTime;
+                if (_audiosource != null && _audioClip != null)
+                {
+                    _audiosource.PlayOneShot(_audioClip);
+                }
+            }
+        }
+        else
+        {
+
+        }
     }
 
     public void UpdatepullStrenght()
     {
-        _pullStrenght.PullStrength += 0.25f;
-        Debug.Log("Strenght for Pull =" + _pullStrenght.PullStrength);
+        if (gameManager.Money >= calculatePriceStrength)
+        {
+            gameManager.PullStrength += 0.25f;
+            Debug.Log("Strenght for Pull =" + gameManager.PullStrength);
+            gameManager.Money -= calculatePriceStrength;
+            if (_audiosource != null && _audioClip != null)
+                {
+                    _audiosource.PlayOneShot(_audioClip);
+                }
+        }
+        else
+        {
+
+        }
+
     }
 
     public void UpdateForce()
     {
-        _force.force += 20f;
-        _force.collected = _force.force;
-        Debug.Log("Speed for Move =  " + _force.force );
+        if (gameManager.Money >= calculatePriceForce)
+        {
+            _player.force += 2f;
+            _player.collected = _player.force;
+            Debug.Log("Speed for Move =  " + _player.force);
+            gameManager.Money -= calculatePriceForce;
+            if (_audiosource != null && _audioClip != null)
+                {
+                    _audiosource.PlayOneShot(_audioClip);
+                }
+        }
+        else
+        {
+
+        }
     }
 
 }

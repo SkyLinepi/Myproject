@@ -15,16 +15,18 @@ public class CameraFollow : MonoBehaviour
     public Image ProgressHold_P_BarFill;
 
     public GameObject HoldResetUIContainer;
+    public AudioClip audioClip;
+    public AudioSource audioSource;
 
     
 
     
-    private float P_holdStartTime = 0f; // ตัวแปรเก็บเวลาที่เริ่มกดปุ่ม P
-    private const float HoldDuration = 3f; // ตัวเเปรเวลาที่ต้องกดปุ่ม P ค้างไว้ (3 วินาที)
+    private float P_holdStartTime = 0f; 
+    private const float HoldDuration = 3f; 
 
     void Start()
     {
-        // ควรตั้งค่าตำแหน่งเริ่มต้นและซ่อน UI ตั้งแต่เริ่มเกม
+        
         transform.position = StartPosition.position;
         if (HoldResetUIContainer != null)
         {
@@ -87,6 +89,7 @@ public class CameraFollow : MonoBehaviour
             {
                 float fillAmount = Mathf.Clamp01(heldTime / HoldDuration); // คำนวณ 0.0 ถึง 1.0
                 ProgressHold_P_BarFill.fillAmount = fillAmount;
+                audioSource.PlayOneShot(audioClip);
             }
 
             // ตรวจสอบการรีเซ็ตเมื่อครบเวลา
@@ -108,6 +111,7 @@ public class CameraFollow : MonoBehaviour
             if (HoldResetUIContainer != null)
             {
                 HoldResetUIContainer.SetActive(false);
+                
             }
             // ล้างค่าเวลาที่เริ่มกดค้างไว้
             P_holdStartTime = 0f; 
