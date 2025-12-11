@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Star Lv.1
   fishPic: {fileID: -855298285791758126, guid: 6f7ade96bd2a429448576751a59ccd36, type: 3}
-  maxFishPatience: 10
+  maxFishPatience: 13
   fishPatienceDrainRates: 1
   ChoasProb: 1
-  ShortestShuffle: 4
-  LongestShuffle: 5
+  ShortestShuffle: 3.5
+  LongestShuffle: 6
   AttemptBeforeCD: 5
   CooldowbDuration: 1
   Sellprice: 80

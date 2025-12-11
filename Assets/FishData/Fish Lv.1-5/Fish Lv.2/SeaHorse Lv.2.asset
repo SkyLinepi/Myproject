@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: SeaHorse Lv.2
   fishPic: {fileID: -2924639834018999399, guid: 636168a8dde724841962d506b9e77495, type: 3}
-  maxFishPatience: 18
+  maxFishPatience: 27
   fishPatienceDrainRates: 6
   ChoasProb: 4
   ShortestShuffle: 0.8
-  LongestShuffle: 3.3
+  LongestShuffle: 2
   AttemptBeforeCD: 5
   CooldowbDuration: 1
   Sellprice: 270

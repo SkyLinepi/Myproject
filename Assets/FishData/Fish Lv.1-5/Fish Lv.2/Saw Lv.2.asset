@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Saw Lv.2
   fishPic: {fileID: 4538383370022818487, guid: 5834f2daaeb5371438d8ca7fd6d4a6d6, type: 3}
-  maxFishPatience: 22
+  maxFishPatience: 42
   fishPatienceDrainRates: 7
   ChoasProb: 3
-  ShortestShuffle: 1.6
-  LongestShuffle: 3.3
+  ShortestShuffle: 0.8
+  LongestShuffle: 2.5
   AttemptBeforeCD: 5
   CooldowbDuration: 1
   Sellprice: 330

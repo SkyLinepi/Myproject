@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Angler Lv.3
   fishPic: {fileID: 1473711290605350641, guid: c568ef02f95b7e44aafda19513746b56, type: 3}
-  maxFishPatience: 30
+  maxFishPatience: 52
   fishPatienceDrainRates: 12
   ChoasProb: 4
-  ShortestShuffle: 0.8
-  LongestShuffle: 1.6
+  ShortestShuffle: 1
+  LongestShuffle: 2.5
   AttemptBeforeCD: 5
   CooldowbDuration: 1
   Sellprice: 420
