@@ -38,7 +38,6 @@ public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointer
         if(audioClip != null && audioSource != null)
         {
             audioSource.PlayOneShot(audioClip);
-            Debug.Log("เล่นเสียงเเล้วไอสาสสส ทำไมมึงไม่ได้ยินวะ");
         }
 
         
@@ -64,6 +63,10 @@ public class ButtonTextSetactive : MonoBehaviour, IPointerEnterHandler, IPointer
         if(OnofButton != null)
         {
             OnofButton.SetActive(false);
+        }
+        else
+        {
+            
         }
 
     }
