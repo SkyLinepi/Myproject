@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: SeaHorse Lv.4
   fishPic: {fileID: -4551357053160818363, guid: b459e39dbdbb0124b9585551df9045e5, type: 3}
-  maxFishPatience: 28
+  maxFishPatience: 26
   fishPatienceDrainRates: 13
   ChoasProb: 4
   ShortestShuffle: 0.5

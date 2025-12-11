@@ -17,8 +17,8 @@ MonoBehaviour:
   maxFishPatience: 20
   fishPatienceDrainRates: 6
   ChoasProb: 3
-  ShortestShuffle: 2.5
-  LongestShuffle: 4
+  ShortestShuffle: 1.8
+  LongestShuffle: 4.5
   AttemptBeforeCD: 5
   CooldowbDuration: 1
   Sellprice: 240

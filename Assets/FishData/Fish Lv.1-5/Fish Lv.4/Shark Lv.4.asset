@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Shark Lv.4
   fishPic: {fileID: 47822432898164558, guid: 884df0ac59c649442835d413a1ec4b46, type: 3}
-  maxFishPatience: 55
+  maxFishPatience: 70
   fishPatienceDrainRates: 21
   ChoasProb: 4
   ShortestShuffle: 0.35
