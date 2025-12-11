@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Blop Lv.5
   fishPic: {fileID: -441534301453633051, guid: a41d9e91182739648a6f4a782ae8e755, type: 3}
-  maxFishPatience: 76
+  maxFishPatience: 30
   fishPatienceDrainRates: 14
   ChoasProb: 1
   ShortestShuffle: 1
