@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: JellyFish Lv.1
   fishPic: {fileID: -6631899222839223490, guid: a2527e67a64b34341b47796d892a98c8, type: 3}
-  maxFishPatience: 16
+  maxFishPatience: 20
   fishPatienceDrainRates: 1
   ChoasProb: 3
   ShortestShuffle: 1.8

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Sword Lv.3
   fishPic: {fileID: -5395776109283108725, guid: 5f399f8b313a4e4499ba6537126e4a2a, type: 3}
-  maxFishPatience: 40
+  maxFishPatience: 66
   fishPatienceDrainRates: 12
   ChoasProb: 6
   ShortestShuffle: 0.5

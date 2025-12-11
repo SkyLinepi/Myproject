@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::fish
   name: Cod Lv.2
   fishPic: {fileID: -4114869297891231438, guid: a185391239bf92347b957bedda779db9, type: 3}
-  maxFishPatience: 18
+  maxFishPatience: 29
   fishPatienceDrainRates: 2
   ChoasProb: 2
   ShortestShuffle: 2.5

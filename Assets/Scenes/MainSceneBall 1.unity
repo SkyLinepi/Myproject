@@ -5270,6 +5270,8 @@ MonoBehaviour:
   moneyText: {fileID: 642990676}
   gameManager: {fileID: 1164434294}
   moneyDisplayPanel: {fileID: 642990674}
+  _audiocilp: {fileID: 0}
+  _audiosorce: {fileID: 0}
 --- !u!1 &1047772178 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 799128042717058051, guid: 090727e704c42c346b68368d5700cde1, type: 3}
@@ -5693,7 +5695,8 @@ MonoBehaviour:
   - {fileID: 0}
   PullStrength: 1
   FIshNaja: {fileID: 1934086144}
-  AudioBackgurad: {fileID: 8300000, guid: aa56974540c5ebc498cb525499c2b157, type: 3}
+  _Audio: {fileID: 0}
+  _AudioSource: {fileID: 0}
   fishPatience: 0
   patienceDrainRate: 1
   currentPlayerDirection: {fileID: 0}
@@ -5738,6 +5741,8 @@ MonoBehaviour:
   moneyDisplay: {fileID: 1022494563}
   backpackUIController: {fileID: 612669110}
   SubMenuContainer: {fileID: 2067291352}
+  audioClip: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1166448172
 GameObject:
   m_ObjectHideFlags: 0
@@ -6339,6 +6344,9 @@ MonoBehaviour:
   OnofCoin: {fileID: 1022494558}
   ProgressHold_P_BarFill: {fileID: 495526881}
   HoldResetUIContainer: {fileID: 535439246}
+  audioClip: {fileID: 0}
+  audioSource: {fileID: 0}
+  Button: {fileID: 0}
 --- !u!1 &1621911909
 GameObject:
   m_ObjectHideFlags: 0
@@ -7340,6 +7348,9 @@ MonoBehaviour:
   OnOfShopAndPlayButton: {fileID: 1800105687}
   OnofShowmoney: {fileID: 1022494558}
   OnofSellButton: {fileID: 769444382}
+  audioClip: {fileID: 0}
+  audioSource: {fileID: 0}
+  OnofButton: {fileID: 0}
 --- !u!1 &1934086144
 GameObject:
   m_ObjectHideFlags: 0
@@ -7833,9 +7844,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88dcecce8a1c2c141864d819e46e191e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shop
-  _reload: {fileID: 1977421031}
-  _force: {fileID: 1977421031}
-  _pullStrenght: {fileID: 1164434294}
+  _player: {fileID: 0}
+  gameManager: {fileID: 0}
+  _audiosource: {fileID: 0}
+  _audioClip: {fileID: 0}
 --- !u!1 &1991514385
 GameObject:
   m_ObjectHideFlags: 0
