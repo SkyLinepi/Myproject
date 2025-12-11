@@ -17,11 +17,6 @@ public class DepthMusicManager : MonoBehaviour
     
      public float[] depthThresholds = new float[4]; 
 
-    void Start()
-    {
-        backgroundMusicSource = GetComponent<AudioSource>();
-    }
-
     void Update()
     {
         
